@@ -2,8 +2,8 @@
 
 
 :root{
-  --primary-color: #3A4D39;
-  --secondary-color:#f0fdfa;
+  --primary-color: #B1A6A4;
+  --secondary-color:#F2F1EF;
 }
 
 html * {
@@ -30,6 +30,7 @@ body{
   justify-content:flex-end;
   width: 1200px;
   background-color:var(--primary-color);
+
     box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
   0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -64,6 +65,8 @@ body{
 .form-container:hover{
   transform: scale(1.01) perspective(1px);
 }
+
+
 .form-container > form{
   display:flex;
   flex: 1 1 0px;
@@ -98,7 +101,6 @@ img{
   position:relative;
   width:50%;
 }
-
 label{
   position: absolute;
   left:-10px;
@@ -124,6 +126,7 @@ input:focus{
   transform: scale(1.03) perspective(1px);
 
 }
+
 .mymouse{
   z-index:2;
   position:absolute;
@@ -136,21 +139,10 @@ input:focus{
   pointer-events: none;
   transition: all 100ms ease-out;
 }
-.fr p{
-    font-size: 15px;
-    line-height: 1.5;
+.fr h1::selection,
+label::selection {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
 
-}
-.fr span {
-    display: block;
-    color:#739072;
-    font-weight: bold;
-}
-.fr span::selection,
-p::selection,
-label::selection,
-.fr h1::selection
- {
-    color:  var(--primary-color);
-    background-color: var(--secondary-color);
-  }
+

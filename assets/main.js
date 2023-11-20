@@ -14,3 +14,9 @@ var cont = document.querySelector('.form-container');
 cont.addEventListener("mouseout", function(){
   cursor.setAttribute("style", "outline:black solid")
 });
+
+
+// This adds some nice ellipsis to the description:
+document.querySelectorAll(".projcard-description").forEach(function(box) {
+    $clamp(box, {clamp: 6});
+  });
