@@ -81,8 +81,8 @@ body {
 /* About Page style */
 
   .about-land .about-img img{
-    width: 1519px;
-    height: 400px;
+    width: 1518px;
+    height: 100vh;
     position: relative;
   }
  .about-land .about-layout{
@@ -90,8 +90,8 @@ body {
     top: 99px;
     left: 0px;
     background-color: #413f3dac;
-    width: 1520px;
-    height: 400px;
+    width: 1518px;
+    height: 100.5vh;
   }
   .about-land .about-text{
     z-index: 1;
@@ -105,7 +105,7 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 35%;
+    top: 59%;
     left: 39%;
     letter-spacing: 2;
   }
