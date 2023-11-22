@@ -1,35 +1,4 @@
-/* About Page style */
-
-  .about-land .about-img img{
-    width: 1518px;
-    height: 100vh;
-    position: relative;
-  }
- .about-land .about-layout{
-    position: absolute;
-    top: 99px;
-    left: 0px;
-    background-color: #413f3dac;
-    width: 1518px;
-    height: 100.5vh;
-  }
-  .about-land .about-text{
-    z-index: 1;
-  } 
-  
-  .about-land .about-text span{
-    color: white;
-    font-weight: bold;
-    font-size: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 59%;
-    left: 39%;
-    letter-spacing: 2;
-  }
-  /* <!-- Get in touch section --> */
+/* <!-- Get in touch section --> */
   .contact {
     margin-top: 40px;
 
