@@ -1,60 +1,49 @@
 // Workin on index.html button to make them functional, starting with landing buttons, about section buttons, then footer links
 // * Langing section *
+
+
 // When they click Join now it shouldshow the sign-up Form
-// Have the button
+if (document.getElementById("home")) {
+  // Have the button JoinNow
 var JoinNow = document.querySelector(".joinNow")
-
-// console.log(JoinNow)
-
 // Make an even, When we click on the button
-JoinNow.addEventListener("click", function () {
-  // it changes the page to the sign-up form
+  JoinNow.addEventListener("click", function () {
+  // It render the signup.html page
   location.href = "signup.html"
 })
 
 // When they click README it should show the about us page
 
 // Have the button
-var JoinNow = document.querySelector(".land-readme")
-
-// console.log(JoinNow)
-
+var landReadme = document.querySelector(".land-readme")
 // Make an even, When we click on the button
-JoinNow.addEventListener("click", function () {
+landReadme.addEventListener("click", function () {
   // it changes the page to the about-us page
   location.href = "about.html"
 })
+
 // * About section *
 
 // When they click README in about section it should show the about us page
-
-// Have the button
-var JoinNow = document.querySelector(".about-btn")
-
-// console.log(JoinNow)
-
+var aboutBtn = document.querySelector(".about-btn")
 // Make an even, When we click on the button
-JoinNow.addEventListener("click", function () {
+aboutBtn.addEventListener("click", function () {
   // it changes the page to the about-us page
   location.href = "about.html"
 })
+}
+// --------------------------------------------------------------------------------------------
 
-// * Footer section *
-
-
-
-
-
-
-
-
-var cursor = document.querySelector(".mymouse")
+// *SignUp Form Code*
+if (document.getElementById("signup")) {
+  console.log("signup: ", document.getElementById("#signup"))
+  var cursor = document.querySelector(".mymouse")
 document.body.addEventListener("mousemove", function(e){
   cursor.style.left = e.clientX + "px";
   cursor.style.top = e.clientY + "px";
 });
 
-/*change mouse color*/
+/* *change mouse color* */
 
 var cont = document.querySelector('.fr');
 cont.addEventListener("mouseover", function(){
@@ -70,5 +59,11 @@ cont.addEventListener("mouseout", function(){
 document.querySelectorAll(".projcard-description").forEach(function(box) {
     $clamp(box, {clamp: 6});
 });
+
+}
+
+// ---------------------------------------------------------------------------
+
+
   
 
