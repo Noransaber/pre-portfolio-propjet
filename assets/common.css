@@ -1,0 +1,143 @@
+:root {
+    --main: #B1A6A4;
+    --light: #F2F1EF;
+    --dark: #413F3D;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+/* Start styling navbar */
+.navbar {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.navbar .left-content:hover{
+  cursor: pointer;
+}
+.navbar .left-content i{
+  color: var(--main);
+  font-size: 40px;
+}
+.navbar .left-content span{
+  font-size: 40px;
+  color: var(--main);
+  margin-left: 17px;
+}
+.navbar .med-section{
+  max-width: 100%;
+}
+
+.navbar .med-section input{
+  padding: 20px;
+  border-radius: 33px;
+  width: 500px;
+  border-color: var(--main);
+  
+}
+
+.navbar .right-section ul{
+  list-style: none;
+  padding: 0;
+  
+}
+.navbar .right-section a {
+  text-decoration: none;
+  color: var(--dark);
+}
+.navbar .right-section a:hover {
+  color: var(--main);
+}
+
+.navbar .right-section ul li{
+  display: inline-block;
+  margin-right: 10px;
+  padding: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--dark);
+  
+}
+.navbar .right-section ul li.active{
+  color: var(--main);
+
+}
+.navbar .right-section ul a.active{
+  color: var(--main);
+
+}
+
+/* Footer design */
+.footer-basic {
+    margin-top: 40px;
+    padding:40px 0;
+    background-color:var(--dark);
+    color:white;
+  }
+  
+  .footer-basic ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:0;
+  }
+  
+  .footer-basic li {
+    padding:0 10px;
+  }
+  
+  .footer-basic ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+  .footer-basic ul a:hover {
+    opacity:1;
+    color: var(--main);
+  }
+  
+  .footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+  }
+  
+  .footer-basic .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #ccc;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+  }
+  
+  .footer-basic .social > a:hover {
+    opacity:0.9;
+  }
+  
+  .footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:0;
+  }
+  
