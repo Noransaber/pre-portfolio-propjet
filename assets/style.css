@@ -491,6 +491,7 @@ justify-content: space-evenly;
 
 .footer-basic ul a:hover {
   opacity:1;
+  color: var(--main);
 }
 
 .footer-basic .social {

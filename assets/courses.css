@@ -95,7 +95,7 @@ body {
     position: absolute;
     top: 99px;
     left: 0px;
-    background-color: rgba(0, 0, 0, 0.494);
+    background-color: #413f3dac;
     width: 1520px;
     height: 400px;
   }
@@ -391,6 +391,7 @@ body {
   
   .footer-basic ul a:hover {
     opacity:1;
+    color: var(--main);
   }
   
   .footer-basic .social {
