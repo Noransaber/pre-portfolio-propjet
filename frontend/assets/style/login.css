@@ -154,3 +154,9 @@ label::selection,
     color:  var(--primary-color);
     background-color: var(--secondary-color);
   }
+a {
+  text-decoration: none;
+  color: wheat;
+  cursor: pointer;
+  font-weight: bold;
+}
