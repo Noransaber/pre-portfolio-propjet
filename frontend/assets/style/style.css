@@ -4,6 +4,7 @@
     background-image: url("../../img/carousel-1.jpg");
     background-size: cover;
     position: relative;
+    width: 100%;
 
 }
 @media (min-width: 640px) {
@@ -17,6 +18,29 @@
     width: 900px;
   }
 
+ }
+ @media (min-width: 1024px) { 
+  .landing {
+
+    width: 1025px;
+    max-width: 1200px;
+    min-height: 100vh;
+  }
+ }
+ @media (min-width: 1280px) {  
+  .landing {
+    width: 1279px;
+    max-width: 1280px;
+    min-height: 100vh;
+  }
+ }
+ @media (min-width: 1536px) {  
+  .landing {
+    /* width: 1535px; */
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+  }
  }
 .landing .layout{
     background-color: #413f3dac;
