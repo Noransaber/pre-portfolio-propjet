@@ -5,7 +5,7 @@ Registered_course TABLE declaration for our database
 """
 
 from sqlalchemy import Column, ForeignKey, String
-from user import Base
+from backend.storage.tables.user import Base
 from uuid import uuid4
 
 

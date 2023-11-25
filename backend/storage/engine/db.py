@@ -41,9 +41,9 @@ class Database:
 
             #Creating database engine
             db_url = "mysql://{}:{}@localhost/{}".format(
-                    user,
-                    password,
-                    database)
+                    "i-am",
+                    "Moneyyear*1",
+                    "skillhub_data")
             engine = create_engine(db_url)
         except Exception as err:
             return {
