@@ -11,6 +11,8 @@ from storage.tables.course import Course
 from storage.tables.interest import Interest
 from storage.tables.registered_course import Registered
 from storage.tables.review import Review
+from os import getenv
+from dotenv import load_dotenv
 
 
 class Database:
@@ -21,14 +23,28 @@ class Database:
 
     def __init__(self):
         """
-        Inits
+        Initializtions
         """
         self.__session = None
 
     def connect(self):
+        """
+        db methods that starts and connects to the database
+        """
+        connected = False
         try:
-            sql_url = "mysql://i-am:Moneyyear*1@localhost/skillhub_data"
-            engine = create_engine(sql_url)
+            #loadiing DDB details from environment data
+            load_dotenv()
+            user = getenv("DB_USER")
+            password = getenv("DB_PASSWORD")
+            database = getenv("DB_DATABASE")
+
+            #Creating database engine
+            db_url = "mysql://{}:{}@localhost/{}".format(
+                    user,
+                    password,
+                    database)
+            engine = create_engine(db_url)
         except Exception as err:
             print(f"An error occured connecting to your DB: {err}")
         else:
@@ -36,5 +52,8 @@ class Database:
             Session = sessionmaker(bind=engine)
             session = scoped_session(Session)
             self.__session = session
+            connected = True
 
-    def 
+    def add(self):
+        """
+        db method that 
