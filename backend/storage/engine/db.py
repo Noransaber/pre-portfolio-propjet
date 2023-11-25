@@ -6,11 +6,11 @@ The engine for managing ourn database data
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
-from storage.tables.user import Base, User
-from storage.tables.course import Course
-from storage.tables.interest import Interest
-from storage.tables.registered_course import Registered
-from storage.tables.review import Review
+from backend.storage.tables.user import Base, User
+from backend.storage.tables.course import Course
+from backend.storage.tables.interest import Interest
+from backend.storage.tables.registered_course import Registered
+from backend.storage.tables.review import Review
 from os import getenv
 from dotenv import load_dotenv
 
@@ -26,14 +26,14 @@ class Database:
         Initializtions
         """
         self.__session = None
+        self.__connected = False
 
     def connect(self):
         """
         db methods that starts and connects to the database
         """
-        connected = False
         try:
-            #loadiing DDB details from environment data
+            #loadiing DB details from environment data
             load_dotenv()
             user = getenv("DB_USER")
             password = getenv("DB_PASSWORD")
@@ -46,14 +46,64 @@ class Database:
                     database)
             engine = create_engine(db_url)
         except Exception as err:
-            print(f"An error occured connecting to your DB: {err}")
+            return {
+                    "connected": False,
+                    "error": err
+                    }
         else:
             Base.metadata.create_all(engine)
             Session = sessionmaker(bind=engine)
             session = scoped_session(Session)
             self.__session = session
-            connected = True
+            self.__connected = True
+            return {
+                    "connected": True,
+                    "error": None
+                    }
 
-    def add(self):
+    def add(self, data):
         """
-        db method that 
+        db method that adds table data to the db
+        """
+        if not self.__connected:
+            return {
+                    "db_connection_status": False,
+                    "data_added": False
+                    }
+        self.__session.add(data)
+        self.__session.commit()
+        return {
+                "db_connection_status": True,
+                "data_added": True
+                }
+
+    def remove(self, data):
+        """
+        db method that deletes table data from the db
+        """
+        if not self.__connected:
+            return {
+                    "db_connection_status": False,
+                    "data_removed": False
+                    }
+        self.__session.delete(data)
+        self.__session.commit()
+        return {
+                "db_connection_status": True,
+                "data_removed": True
+                }
+
+    def save(self):
+        """
+        db method that saves current session state to the db
+        """
+        if self.__connected:
+            self.__session.commit()
+            return {
+                    "saved": True
+                    }
+        else:
+            return {
+                    "saved": False
+                    }
+

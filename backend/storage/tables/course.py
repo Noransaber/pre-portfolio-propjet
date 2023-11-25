@@ -15,13 +15,13 @@ class Course(Base):
     Declaration of Course class or table
     """
     __tablename__ = 'courses'
-    title = Column(String, unique=True, nullable=False)
-    id = Column(String, primary_key=True, default=str(uuid4()), unique=True)
-    image_url = Column(String, nullable=False)
-    decription = Column(String, default="No description set for this course")
+    title = Column(String(100), unique=True, nullable=False)
+    id = Column(String(100), primary_key=True, default=str(uuid4()), unique=True)
+    image_url = Column(String(500), nullable=False)
+    decription = Column(String(500), default="No description set for this course")
     likes = Column(Integer, default=0)
-    categories = Column(String, nullable=False)
-    query_link = Column(String, nullable=False)
+    categories = Column(String(50), nullable=False)
+    query_link = Column(String(500), nullable=False)
 
     # Declaring relationships
     reviews = Relationship('Review', back_populates="course")
