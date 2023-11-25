@@ -14,7 +14,7 @@ class Registered(Base):
     Declaration of Registered courses class or table
     """
     __tablename__ = 'registered_courses'
-    id = Column(String, primary_key=True, default=str(uuid4()), unique=True)
-    user_id = Column(String, ForeignKey("users.id"), nullable=False)
-    course_id = Column(String, ForeignKey("courses.id"), nullable=False)
-    course_title = Column(String, nullable=False)
+    id = Column(String(100), primary_key=True, default=str(uuid4()), unique=True)
+    user_id = Column(String(100), ForeignKey("users.id"), nullable=False)
+    course_id = Column(String(100), ForeignKey("courses.id"), nullable=False)
+    course_title = Column(String(100), nullable=False)
