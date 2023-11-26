@@ -23,6 +23,7 @@
 /* Medium deivces rules */
 @media (min-width: 992px) {
   .landing .text-cont .title {
+    font-size: 40px !important;
   }
 
 }
