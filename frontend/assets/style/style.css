@@ -102,6 +102,12 @@ span, p {
 }
  /* Mobile & Tablet Rules */
 @media (max-width: 767px) {
+  .about-us {
+    margin-top: 40px;
+    text-align: center;
+
+    
+}
   .about-us .left-sec img {
     display: none;
   }
