@@ -5,6 +5,43 @@
     display: flex;
     justify-content:space-evenly;
 }
+ /* Mobile & Tablet Rules */
+ @media (max-width: 767px) {
+    .about-us .left-sec img {
+      display: none;
+    }
+  }
+  
+  
+  /* small screen rules */
+  @media (min-width: 768px) {
+    .about-us .left-sec img {
+      display: none;
+    }
+  }
+  
+  
+  /* Medium screen rules */
+  @media (min-width: 992px) {
+    .about-us .left-sec img{
+      width: 122px;
+      height: 122px;
+      border-radius: 33px;
+      display: block;
+      margin-right: 20px;
+  
+  }
+  }
+  /* Large devices rules */
+  @media (min-width: 1200px) {
+    .about-us .left-sec img{
+      width: 444px;
+      height: 444px;
+      border-radius: 33px;
+      display: block;
+  
+  }
+  }
 .about-us .left-sec{
     max-width: 100%;
 }
