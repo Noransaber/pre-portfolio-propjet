@@ -22,45 +22,6 @@ body {
   align-items: center;
 
 }
-@media (min-width: 640px) { 
-  .navbar {
-    max-width: 600px;
-    position: relative;
-    padding: 50px;
-
-  }
-  .navbar .left-content {
-    max-width: calc(600/2);
-    position: absolute;
-  }
-  .navbar i {
-    display: none;
-  }
-  .navbar .left-content span {
-    top: 10px;
-    left: 10px;
-    font-size: 10px;
-  }
-  .navbar .med-section {
-    max-width: calc(600/2);
-  }
-  .navbar .med-section input {
-    position: absolute;
-    top: 14px;
-    left: 105%;
-    max-width: 300px;
-
-  }
-  .navbar .right-section {
-
-    display: none;
-
-  }
-  .navbar .right-section ul li a{
-    display: none;
-    
-  }
-}
 .navbar .left-content:hover{
   cursor: pointer;
 }
