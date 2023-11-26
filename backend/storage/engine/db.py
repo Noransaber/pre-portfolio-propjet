@@ -38,6 +38,10 @@ class Database:
             user = getenv("DB_USER")
             password = getenv("DB_PASSWORD")
             database = getenv("DB_DATABASE")
+            if None in [user, password, database]:
+                raise ValueError(
+                        "One or more required environment variables are missing"
+                        )
 
             #Creating database engine
             db_url = "mysql://{}:{}@localhost/{}".format(
@@ -107,3 +111,12 @@ class Database:
                     "saved": False
                     }
 
+    def get_table(self, table):
+        """
+        db method that gets all rows in the provided table from the db
+        """
+        if self.__connected:
+            data = self.__session.query(table).all()
+            return data
+        else:
+            return None
