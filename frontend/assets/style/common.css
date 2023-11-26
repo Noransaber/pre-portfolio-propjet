@@ -5,6 +5,8 @@
 }
 * {
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
 body {
@@ -21,6 +23,65 @@ body {
   justify-content: space-between;
   align-items: center;
 
+}
+/* Extra small devices rules */
+@media screen and (max-width: 767px) {
+  .navbar .left-content i {
+    display: none;
+  }
+  .navbar .left-content span {
+    font-size: 15px  !important;
+  }
+  .navbar .med-section input {
+    max-width: 220px;
+  }
+  .navbar .right-section a {
+    font-size: 10px !important;
+  }
+}
+/* Small deivces rules */
+@media screen and (min-width: 768px) {
+  .navbar .left-content i {
+    display: none;
+  }
+  .navbar .left-content span {
+    font-size: 20px  !important;
+  }
+  .navbar .med-section input {
+    max-width: 220px;
+  }
+  .navbar .right-section a {
+    font-size: 10px !important;
+  }
+
+}
+/* Medium devices */
+@media screen and (min-width: 992px) {
+  .navbar .left-content span {
+    font-size: 23px  !important;
+  }
+
+}
+/* Large devices */
+@media screen and (min-width: 1200px) {
+  .navbar .med-section input {
+    max-width: 300px;
+  }
+ .navbar .left-content{
+  display: flex;
+  justify-content: space-evenly;
+ }
+  .navbar .left-content span{
+    font-size: 40px !important;
+  }
+  .navbar .right-section a {
+    font-size: 18px !important;
+  }
+  .navbar .left-content i {
+    display: block;
+    margin-top: 5px;
+  }
+  
 }
 .navbar .left-content:hover{
   cursor: pointer;
@@ -121,7 +182,7 @@ body {
     background-color:var(--dark);
     color:white;
   }
-  
+
   .footer-basic ul {
     padding:0;
     list-style:none;

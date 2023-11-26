@@ -7,6 +7,33 @@
     width: 100%;
 
 }
+/* adjusting it in extra small devices */
+@media (max-width: 767px) {
+  .landing .text-cont .title {
+    font-size: 20px !important;
+  }
+}
+/* Small deivces */
+@media (min-width: 768px) {
+  .landing .text-cont .title {
+    font-size: 18px !important;
+    
+  }
+}
+/* Medium deivces rules */
+@media (min-width: 992px) {
+  .landing .text-cont .title {
+  }
+
+}
+/* Big deivces rules */
+@media (min-width: 1200px) {
+  .landing .text-cont .title {
+    font-size: 55px !important;
+  }
+  
+}
+
 .landing .layout{
     background-color: #413f3dac;
     z-index: 1;
@@ -65,11 +92,50 @@ span, p {
     width: 160px;
     border-radius: 15px 0px;
 }
+
+
 /* ABOUT US SECTION */
 .about-us {
     margin-top: 40px;
     display: flex;
     justify-content:space-evenly;
+}
+ /* Mobile & Tablet Rules */
+@media (max-width: 767px) {
+  .about-us .left-sec img {
+    display: none;
+  }
+}
+
+
+/* small screen rules */
+@media (min-width: 768px) {
+  .about-us .left-sec img {
+    display: none;
+  }
+}
+
+
+/* Medium screen rules */
+@media (min-width: 992px) {
+  .about-us .left-sec img{
+    width: 122px;
+    height: 122px;
+    border-radius: 33px;
+    display: block;
+    margin-right: 20px;
+
+}
+}
+/* Large devices rules */
+@media (min-width: 1200px) {
+  .about-us .left-sec img{
+    width: 444px;
+    height: 444px;
+    border-radius: 33px;
+    display: block;
+
+}
 }
 .about-us .left-sec{
     max-width: 100%;
@@ -83,8 +149,6 @@ span, p {
 .about-us .right-sec{
     max-width: 100%;
     margin-right: 50px;
-
-
 }
 .about-us .right-sec span{
     color: var(--main);
@@ -179,7 +243,6 @@ span, p {
   padding: 0;
   margin: 0;
 }
-
 .courses-sec span{
   display: flex;
   justify-content: center;
