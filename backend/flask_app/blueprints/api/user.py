@@ -25,15 +25,18 @@ def users_get():
     user = {}
     for user_obj in u_objects:
         user_dict = user_obj.__dict__
+        if "_sa_instance_state" in user_dict:
+            del user_dict["_sa_instance_state"]
         password_ = user_dict.get("password")
         email_ = user_dict.get("email")
         if password == password_ and email == email_:
             user = user_dict
+            del user["password"]
             break
 
     if not user:
         abort(404, description="User not found")
-
+    
     res = jsonify({"user": user})
     res.status_code = 200
     return res
@@ -63,6 +66,7 @@ def users_post():
         abort(500, description="The database has encountered an error, please try again")
 
     new_user = new_user.__dict__
+    del new_user["password"]
     if "_sa_instance_state" in new_user:
         del new_user["_sa_instance_state"]
 
