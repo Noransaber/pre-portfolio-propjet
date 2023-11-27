@@ -108,6 +108,9 @@ section .title::after{
 .navbar.sticky .logo .hire span{
     color: #fff;
 }
+.navbar ul.menu:hover, .navbar.sticky .menu li a:hover{
+    border: 1px solid white;  
+}
 .navbar .menu li{
     list-style: none;
     display: inline-block;
@@ -119,6 +122,12 @@ section .title::after{
     font-weight: 500;
     margin-left: 25px;
     transition: color 0.3s ease;
+}
+.navbar ul a {
+    color: #183D3D !important;
+}
+.navbar ul a:hover {
+    color: white !important;
 }
 .navbar .menu li .hire:hover{
     color: #183D3D;
