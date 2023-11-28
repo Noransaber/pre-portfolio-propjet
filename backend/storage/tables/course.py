@@ -22,7 +22,7 @@ class Course(Base):
     likes = Column(Integer, default=0)
     categories = Column(String(200))
     is_popular = Column(Boolean, default=False)
-    query_link = Column(String(500), nullable=False)
+    #query_link = Column(String(500), nullable=False)
 
     # Declaring relationships
     videos = Relationship('Video', back_populates="course")
