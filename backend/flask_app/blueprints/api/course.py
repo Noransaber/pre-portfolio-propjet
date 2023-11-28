@@ -24,8 +24,10 @@ def courses():
     courses = []
     for course in c_objects:
         reviews = [to_dict(review) for review in course.reviews]
+        videos = [to_dict(video) for video in course.videos]
         course_dict = to_dict(course)
         course_dict["reviews"] = reviews
+        course_dict["videos"] = videos
         courses.append(course_dict)
 
     res = jsonify({"courses": courses})
@@ -44,8 +46,10 @@ def course(arg):
     data = {}
     for course in c_objects:
         reviews = [to_dict(review) for review in course.reviews]
+        videos = [to_dict(video) for video in course.videos]
         course_dict = to_dict(course)
         course_dict["reviews"] = reviews
+        course_dict["videos"] = videos
         if arg in [course_dict.get("title"), course_dict.get("id")]:
             data = course_dict
             break
