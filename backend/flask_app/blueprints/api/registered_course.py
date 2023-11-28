@@ -6,7 +6,7 @@ Blueprint for the registered_courses routes
 
 from flask import jsonify, abort, request
 from backend.flask_app.blueprints.api.main import api_blueprint
-from backend.storage.tables.registered_courses import Registered
+from backend.storage.tables.registered_course import Registered
 from backend.storage.tables.course import Course
 from backend.storage.tables.user import User
 from backend import db, to_dict
