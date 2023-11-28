@@ -14,6 +14,9 @@ from backend import db, to_dict
 
 @api_blueprint.route("/reviews", methods=["POST"])
 def reviews():
+    """
+    Routes that add a review to specified course
+    """
     data = request.get_json()
     if not data:
         abort(400, description="Param not a JSON type")
