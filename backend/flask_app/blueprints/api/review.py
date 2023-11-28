@@ -41,6 +41,6 @@ def reviews():
     db.add(new_review)
     new_review = to_dict(new_review)
 
-    res = jsonify(new_review)
+    res = jsonify({"review": new_review})
     res.status_code = 200
     return res
