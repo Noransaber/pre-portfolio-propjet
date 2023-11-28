@@ -7,7 +7,7 @@ Blueprint for the registered_courses route
 from flask import jsonify, abort, request
 from backend.flask_app.blueprints.api.main import api_blueprint
 from backend.storage.tables.registered_courses import Registered
-from backend import db
+from backend import db, to_dict
 
 
 @api_blueprint.route("/registered", methods=["GET"])
@@ -22,9 +22,7 @@ def registered_get():
 
     registered_c = []
     for r_obj in r_objects:
-        r_dict = r_obj.__dict__
-        if "_sa_instance_state" in r_dict:
-            del r_dict["_sa_instance_state"]
+        r_dict = to_dict(r_obj)
         db_user_id = r_dict.get("user_id")
         if user_id == db_user_id:
             registered_c.append(r_dict)
@@ -64,9 +62,7 @@ def registered_post():
     if response["data_added"] is False:
         abort(500, description="The database has encountered an error, please try again")
 
-    new_registered_course = new_registered_course.__dict__
-    if "_sa_instance_state" in new_registered_course:
-        del new_registered_course["_sa_instance_state"]
+    new_registered_course = to_dict(new_registered_course)
 
     res = jsonify({"registered_course": new_registered_course})
     res.status_code = 200

@@ -7,7 +7,7 @@ Blueprint for the users route
 from flask import jsonify, abort, request
 from backend.flask_app.blueprints.api.main import api_blueprint
 from backend.storage.tables.user import User
-from backend import db
+from backend import db, to_dict
 
 
 @api_blueprint.route("/users", methods=["GET"])
@@ -19,14 +19,12 @@ def users_get():
         abort(400, description="Incomplete login credentials")
 
     u_objects = db.get_table(User)
-    if not u_objects:
+    if u_objects is None:
         abort(500, description="The database has encountered an error, please tr      y again")
 
     user = {}
     for user_obj in u_objects:
-        user_dict = user_obj.__dict__
-        if "_sa_instance_state" in user_dict:
-            del user_dict["_sa_instance_state"]
+        user_dict = to_dict(user_obj)
         password_ = user_dict.get("password")
         email_ = user_dict.get("email")
         if password == password_ and email == email_:
@@ -65,10 +63,8 @@ def users_post():
     if response["data_added"] is False:
         abort(500, description="The database has encountered an error, please try again")
 
-    new_user = new_user.__dict__
+    new_user = to_dict(new_user)
     del new_user["password"]
-    if "_sa_instance_state" in new_user:
-        del new_user["_sa_instance_state"]
 
     res = jsonify({"user": new_user})
     res.status_code = 200
