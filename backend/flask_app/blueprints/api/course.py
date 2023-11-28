@@ -12,10 +12,13 @@ from backend import db, to_dict
 
 @api_blueprint.route("/courses")
 def courses():
+    """
+    Route that returns all courses in database
+    """
     c_objects = db.get_table(Course)
     if c_objects is None:
         abort(500, description="The database has encountered an error, please try again")
-    if not c_objects:
+    if len(c_objects) == 0:
         abort(404, description="No course found")
 
     courses = []
@@ -29,8 +32,11 @@ def courses():
     res.status_code = 200
     return res
 
-@api_blueprint.route("/courses/<title>")
-def course(title):
+@api_blueprint.route("/courses/<string:arg>")
+def course(arg):
+    """
+    Route that returns a course that matches with the provided is or title
+    """
     c_objects = db.get_table(Course)
     if c_objects is None:
         abort(500, description="The database has encountered an error, please try again")
@@ -40,11 +46,11 @@ def course(title):
         reviews = [to_dict(review) for review in course.reviews]
         course_dict = to_dict(course)
         course_dict["reviews"] = reviews
-        if str(course_dict.get("course_title")) == str(title):
+        if arg in [course_dict.get("title"), course_dict.get("id")]:
             data = course_dict
             break
-    if not data:
-        abort(404, description="Course '{}' not found".format(id))
+    if len(data) == 0:
+        abort(404, description="Course not found")
 
     res = jsonify({"course": data})
     res.status_code = 200
