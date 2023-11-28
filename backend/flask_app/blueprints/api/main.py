@@ -8,4 +8,5 @@ from flask import Blueprint
 
 api_blueprint = Blueprint("apis", __name__, url_prefix="/api")
 
-from .course import courses
+from backend.flask_app.blueprints.api import course
+from backend.flask_app.blueprints.api import user
