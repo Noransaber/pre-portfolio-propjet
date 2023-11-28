@@ -12,6 +12,9 @@ from backend import db, to_dict
 
 @api_blueprint.route("/users", methods=["GET"])
 def users_get():
+    """
+    Route that fetches a user whose details match the provided request data
+    """
     #username = request.args.get("username")
     password = request.args.get("password")
     email = request.args.get("email")
@@ -32,7 +35,7 @@ def users_get():
             del user["password"]
             break
 
-    if not user:
+    if len(user) == 0:
         abort(404, description="User not found")
     
     res = jsonify({"user": user})
@@ -42,6 +45,9 @@ def users_get():
 
 @api_blueprint.route("/users", methods=["POST"])
 def users_post():
+    """
+    Route that adds a user to the database
+    """
     data = request.get_json()
     if not data:
         abort(400, description="Provided data not a JSON type")
