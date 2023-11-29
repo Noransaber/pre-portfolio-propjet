@@ -18,7 +18,7 @@ class Video(Base):
     id = Column(String(100), primary_key=True, default=str(uuid4()), unique=True)
     title = Column(String(200), default="(null)")
     course_id = Column(String(100), ForeignKey("courses.id"), nullable=False)
-    embed_link = Column(String(800), nullable=False)
+    embed_link = Column(String(1000), nullable=False)
 
     # Declaring relationships
     course = Relationship('Course', back_populates="videos")
