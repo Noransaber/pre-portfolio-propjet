@@ -11,6 +11,7 @@ from backend.storage.tables.course import Course
 from backend.storage.tables.interest import Interest
 from backend.storage.tables.registered_course import Registered
 from backend.storage.tables.review import Review
+from backend.storage.tables.video import Video
 from os import getenv
 from dotenv import load_dotenv
 
@@ -118,5 +119,19 @@ class Database:
         if self.__connected:
             data = self.__session.query(table).all()
             return data
+        else:
+            return None
+
+    def get_row(self, table, id):
+        """
+        db method that gets the row whose column matched the provided
+        column data
+        """
+        if self.__connected:
+            datas = self.__session.query(table).all()
+            for data in datas:
+                if data.id == str(id):
+                    return data
+            return {}
         else:
             return None

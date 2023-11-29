@@ -20,7 +20,7 @@ class Review(Base):
     user_id = Column(String(100), ForeignKey("users.id"), nullable=False)
     course_id = Column(String(100), ForeignKey("courses.id"), nullable=False)
     message = Column(String(200), default="(null)")
-    date_time = Column(DateTime, default=datetime.utcnow())
+    #date_time = Column(DateTime, default=datetime.utcnow())
 
     # Declaring relationships
     course = Relationship('Course', back_populates="reviews")
