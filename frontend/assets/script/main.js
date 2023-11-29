@@ -67,3 +67,38 @@ if (document.getElementById("login")) {
 
 }
 // ---------------------------------------------------------------------------
+
+
+if (document.getElementById("interestPopup")) {
+  // Function to display the popup
+function showPopup() {
+  document.getElementById('interestPopup').style.display = 'block';
+}
+
+// Function to close the popup
+function closePopup() {
+  document.getElementById('interestPopup').style.display = 'none';
+}
+
+// Function to submit the form (you can modify this to handle form submission)
+function submitForm() {
+  // Get the selected interests
+  var interests = [];
+  var checkboxes = document.getElementsByName('interest');
+  checkboxes.forEach(function (checkbox) {
+      if (checkbox.checked) {
+          interests.push(checkbox.value);
+      }
+  });
+
+  // Do something with the selected interests (e.g., send them to the server)
+  console.log('Selected Interests:', interests);
+
+  // Close the popup (you can remove this if you want to keep the popup open)
+  closePopup();
+}
+
+// Show the popup when the page loads (you can remove this if you want to show the popup in response to a button click)
+window.onload = showPopup;
+
+}

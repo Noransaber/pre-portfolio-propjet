@@ -109,6 +109,9 @@ label{
   background-color:var(--primary-color);
   padding-right:5%;
 }
+a {
+  width: 650px;
+}
 input{
   background:transparent;
   border:none;
