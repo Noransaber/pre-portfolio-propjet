@@ -18,7 +18,7 @@ class Course(Base):
     title = Column(String(100), unique=True, nullable=False)
     id = Column(String(100), primary_key=True, default=str(uuid4()), unique=True)
     image_url = Column(String(500), nullable=False)
-    decription = Column(String(500), default="No description set for this course")
+    description = Column(String(500), default="No description set for this course")
     likes = Column(Integer, default=0)
     categories = Column(String(200))
     is_popular = Column(Boolean, default=False)
