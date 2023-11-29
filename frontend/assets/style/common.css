@@ -144,7 +144,11 @@ body {
 /* Langing section */
 
 .about-land {
-  max-width: 100%;
+  min-height: 100vh;
+  background-image: url("../../img/carousel-1.jpg");
+  background-size: cover;
+  position: relative;
+  width: 100%;
 
   
 }
@@ -157,18 +161,15 @@ body {
     
   }
 }
-.about-land .about-img img{
-  width: 1518px;
-  height: 100vh;
-  position: relative;
-}
+
 .about-land .about-layout{
-  position: absolute;
-  top: 99px;
-  left: 0px;
   background-color: #413f3dac;
-  width: 1518px;
-  height: 100.5vh;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
 }
 .about-land .about-text{
   z-index: 1;
@@ -182,8 +183,9 @@ body {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 59%;
+  top: 43%;
   left: 39%;
+  z-index: 1;
 }
 
 
