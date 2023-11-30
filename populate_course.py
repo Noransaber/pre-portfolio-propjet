@@ -17,6 +17,9 @@ query = input("Query=> ")
 description = input("Description=> ")
 popular = int(input("Popular (1/0)=> "))
 
+if len(description) >= 1000:
+    description = description[:996] + "..."
+
 if popular not in [0, 1]:
     print("Wrong popular choice, retry again")
     exit()
@@ -54,7 +57,16 @@ for video in response_data:
     # Extracting details
     title = video['name']
     html_embed_code = video['embed']['html']
+    
+    if not title:
+        continue
 
+    if len(title) >= 200:
+        title = title[:186] + "..."
+
+    if not html_embed_code or len(html_embed_code) > 1000:
+        continue
+        
     new_video = Video(
             title=title,
             id=str(uuid4()),
@@ -66,4 +78,5 @@ for video in response_data:
     res = db.add(new_video)
     print(title)
     print(res)
+    print()
     time.sleep(1)

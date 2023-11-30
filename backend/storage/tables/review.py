@@ -19,7 +19,7 @@ class Review(Base):
     id = Column(String(100), primary_key=True, default=str(uuid4()), unique=True)
     user_id = Column(String(100), ForeignKey("users.id"), nullable=False)
     course_id = Column(String(100), ForeignKey("courses.id"), nullable=False)
-    message = Column(String(200), default="(null)")
+    message = Column(String(300), default="(null)")
     #date_time = Column(DateTime, default=datetime.utcnow())
 
     # Declaring relationships
