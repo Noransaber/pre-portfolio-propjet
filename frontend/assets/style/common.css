@@ -141,8 +141,6 @@ body {
   background-size: cover;
   position: relative;
   width: 100%;
-
-  
 }
 /* Mobile & Tablet Rules */
 @media (max-width: 767px) {

@@ -1,3 +1,6 @@
+.about-land {
+  background-image: url("https://images.unsplash.com/photo-1485988412941-77a35537dae4?q=80&w=1796&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") !important;
+}
 /* Start courses Section */
   .courses-sec {
     margin-top: 40px;
@@ -244,3 +247,27 @@
     right: -10px;
     top: 0;
   }
+/* All Courses Button */
+.all-courses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.all-courses button {
+  padding: 20px;
+  font-weight: bold;
+  font-size: 19px;
+  width: 425px;
+  background-color: var(--main);
+  border-color: var(--main);
+  border: 1px solid var(--main);
+  border-radius: 15px 0px;
+  cursor: pointer;
+  color: white;
+  transition: 1s;
+}
+.all-courses button:hover {
+  width: 450px;
+  background-color: transparent;
+  color: var(--main);
+}
