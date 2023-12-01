@@ -100,14 +100,6 @@ body {
   max-width: 100%;
 }
 
-.navbar .med-section input{
-  padding: 20px;
-  border-radius: 33px;
-  width: 500px;
-  border-color: var(--main);
-  
-}
-
 .navbar .right-section ul{
   list-style: none;
   padding: 0;
