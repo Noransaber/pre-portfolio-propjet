@@ -62,8 +62,27 @@ button.hover-me:hover {
 
 
   /* Styling video section */
+  .video-details {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .container .video-title h3 {
+    font-size: 35px;
+    text-align: center;
+    color: var(--main);
+    letter-spacing: 10px;
+  }
+
 .video{
-    margin-top: 50px;
+    display: block;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    position: relative;
 }
 .container {
     display: flex;
@@ -71,10 +90,30 @@ button.hover-me:hover {
     align-items: center;
     height: 100vh;
     margin-top: 50px;
+    position: relative;
 }
-
-video {
-    width: 100%;
-    height: auto;
-    border-radius: 60px 0px 60px 0px;
+iframe {
+    width: 1000px;
+    height: 500px;
 } 
+/* .video::after {
+    content: "";
+    background-color: #131211;
+    position: absolute;
+    bottom: 28%;
+    left: 90%;
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid #555;
+}
+.video::before {
+    content: "";
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 26%;
+    left: 70%;
+} */
