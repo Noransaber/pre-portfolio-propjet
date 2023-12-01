@@ -10,6 +10,7 @@ from backend.storage.tables.registered_course import Registered
 from backend.storage.tables.course import Course
 from backend.storage.tables.user import User
 from backend import db, to_dict
+from uuid import uuid4
 
 
 @api_blueprint.route("/registered", methods=["GET"])
@@ -73,17 +74,19 @@ def registered_post():
             abort(500, description=des)
 
     new_registered_course = Registered(
+            id=str(uuid4()),
             course_title=d_course_title,
             course_id=d_course_id,
             user_id=d_user_id
             )
-    response = db.new(new_registered_course)
+    response = db.add(new_registered_course)
 
     if response["data_added"] is False:
         abort(500, description="The database has encountered an error, please try again")
 
-    new_registered_course = to_dict(new_registered_course)
+    reg_c_dict = db.get_row(Registered, new_registered_course.id)
+    reg_c_dict = to_dict(reg_c_dict)
 
-    res = jsonify({"registered_course": new_registered_course})
+    res = jsonify({"registered_course": reg_c_dict})
     res.status_code = 200
     return res
