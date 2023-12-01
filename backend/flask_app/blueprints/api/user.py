@@ -8,6 +8,7 @@ from flask import jsonify, abort, request
 from backend.flask_app.blueprints.api.main import api_blueprint
 from backend.storage.tables.user import User
 from backend import db, to_dict
+from uuid import uuid4
 
 
 @api_blueprint.route("/users", methods=["GET"])
@@ -62,14 +63,14 @@ def users_post():
     d_name = data.get("name")
     d_email = data.get("email")
     d_password = data.get("password")
-
-    new_user = User(name=d_name, email=d_email, password=d_password)
-    response = db.new(new_user)
+    
+    new_user = User(id=str(uuid4()), name=d_name, email=d_email, password=d_password)
+    response = db.add(new_user)
 
     if response["data_added"] is False:
         abort(500, description="The database has encountered an error, please try again")
 
-    new_user = to_dict(new_user)
+    new_user = to_dict(db.get_row(User, new_user.id))
     del new_user["password"]
 
     res = jsonify({"user": new_user})
