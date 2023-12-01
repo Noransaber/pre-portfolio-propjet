@@ -10,6 +10,7 @@ from backend.storage.tables.review import Review
 from backend.storage.tables.course import Course
 from backend.storage.tables.user import User
 from backend import db, to_dict
+from uuid import uuid4
 
 
 @api_blueprint.route("/reviews", methods=["POST"])
@@ -35,6 +36,7 @@ def reviews():
         abort(400, description="Provided user id is not associated with any user in the db")
 
     new_review = Review(
+            id=str(uuid4()),
             message=data.get("message"),
             course_id=data.get("course_id"),
             user_id=data.get("user_id"),
@@ -42,6 +44,7 @@ def reviews():
             )
     
     db.add(new_review)
+    new_review = db.get_row(Review, new_review.id)
     new_review = to_dict(new_review)
 
     res = jsonify({"review": new_review})
