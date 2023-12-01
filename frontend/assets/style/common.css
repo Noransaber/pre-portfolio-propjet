@@ -161,7 +161,10 @@ body {
     
   }
 }
+a {
+  text-decoration: none;
 
+}
 .about-land .about-layout{
   background-color: #413f3dac;
   z-index: 1;
