@@ -26,7 +26,7 @@
     background-color: var(--dark);
     position: absolute;
     top: 70%;
-    left: 54%;
+    left: 52%;
     
   }
   .courses-sec span::after {
@@ -36,7 +36,7 @@
     background-color: var(--dark);
     position: absolute;
     top: 70%;
-    left: 43%;
+    left: 45%;
 
   }
   
@@ -45,6 +45,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    line-height: 2;
 
   }
 
