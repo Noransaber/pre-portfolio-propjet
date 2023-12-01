@@ -22,5 +22,10 @@
         document.querySelectorAll(".projcard-description").forEach(function (box) {
             $clamp(box, { clamp: 6 });
         });
-    }
-    adjustingCursorInForm()
+}
+    // Calling the funtion
+adjustingCursorInForm()
+
+// * Saving the user in localstorage to display differenct pages and components *
+
+    
