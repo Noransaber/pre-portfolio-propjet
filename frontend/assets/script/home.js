@@ -5,6 +5,13 @@ var aboutBtn = document.querySelector('.about-btn');
 
 function getCourses() {
   fetch("http://localhost:5000/api/courses")
+    .then(function (data) {
+      return data.json()
+    })
+    .then(function (data) {
+      
+
+    })
 
 }
 
