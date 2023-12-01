@@ -177,8 +177,9 @@ a {
   align-items: center;
   position: absolute;
   top: 43%;
-  left: 39%;
+  left: 37%;
   z-index: 1;
+  letter-spacing: 18px;
 }
 
 
