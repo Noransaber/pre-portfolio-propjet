@@ -15,15 +15,14 @@ function checkUserSign() {
     }
     if (logout) {
       logout.style.display = 'inline';
+      logout.addEventListener('click', function () {
+	localStorage.removeItem('user-data');    
+  	// location.reload();    
+  	location.href = 'index.html';
+      });
     }
   }
 }
-
-logout.addEventListener('click', function () {
-  localStorage.removeItem('user-data');
-  // location.reload();
-  location.href = 'index.html';
-});
 
 if (showCourse) {
   showCourse.addEventListener('click', function () {
