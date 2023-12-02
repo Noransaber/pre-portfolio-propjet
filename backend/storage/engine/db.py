@@ -34,27 +34,27 @@ class Database:
         db methods that starts and connects to the database
         """
         try:
-            #loadiing DB details from environment data
+            # loadiing DB details from environment data
             load_dotenv()
             user = getenv("DB_USER")
             password = getenv("DB_PASSWORD")
             database = getenv("DB_DATABASE")
             if None in [user, password, database]:
                 raise ValueError(
-                        "One or more required environment variables are missing"
-                        )
+                    "One or more required environment variables are missing"
+                )
 
-            #Creating database engine
+            # Creating database engine
             db_url = "mysql://{}:{}@localhost/{}".format(
-                    user,
-                    password,
-                    database)
-            engine = create_engine(db_url)
+                user,
+                password,
+                database)
+            engine = create_engine(db_url, pool_size=20, max_overflow=10)
         except Exception as err:
             return {
-                    "connected": False,
-                    "error": err
-                    }
+                "connected": False,
+                "error": err
+            }
         else:
             Base.metadata.create_all(engine)
             Session = sessionmaker(bind=engine)
@@ -62,9 +62,9 @@ class Database:
             self.__session = session
             self.__connected = True
             return {
-                    "connected": True,
-                    "error": None
-                    }
+                "connected": True,
+                "error": None
+            }
 
     def add(self, data):
         """
@@ -72,15 +72,15 @@ class Database:
         """
         if not self.__connected:
             return {
-                    "db_connection_status": False,
-                    "data_added": False
-                    }
+                "db_connection_status": False,
+                "data_added": False
+            }
         self.__session.add(data)
         self.__session.commit()
         return {
-                "db_connection_status": True,
-                "data_added": True
-                }
+            "db_connection_status": True,
+            "data_added": True
+        }
 
     def remove(self, data):
         """
@@ -88,15 +88,15 @@ class Database:
         """
         if not self.__connected:
             return {
-                    "db_connection_status": False,
-                    "data_removed": False
-                    }
+                "db_connection_status": False,
+                "data_removed": False
+            }
         self.__session.delete(data)
         self.__session.commit()
         return {
-                "db_connection_status": True,
-                "data_removed": True
-                }
+            "db_connection_status": True,
+            "data_removed": True
+        }
 
     def save(self):
         """
@@ -105,12 +105,12 @@ class Database:
         if self.__connected:
             self.__session.commit()
             return {
-                    "saved": True
-                    }
+                "saved": True
+            }
         else:
             return {
-                    "saved": False
-                    }
+                "saved": False
+            }
 
     def get_table(self, table):
         """
