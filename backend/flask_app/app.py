@@ -10,9 +10,10 @@ from backend.flask_app.blueprints.assets.styles import styles_blueprint
 from backend.flask_app.blueprints.assets.scripts import scripts_blueprint
 from backend.flask_app.blueprints.img.images import img_blueprint
 from backend.flask_app.blueprints.api.main import api_blueprint
-
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Set the template folder
 template_folder = "../../frontend/HTML/"
