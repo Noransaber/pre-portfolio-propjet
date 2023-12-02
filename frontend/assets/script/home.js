@@ -52,4 +52,4 @@ aboutBtn.addEventListener('click', function () {
   location.href = 'about.html';
 });
 
-getCourses()
+//getCourses()
