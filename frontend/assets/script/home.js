@@ -1,21 +1,43 @@
 var JoinNow = document.querySelector('.joinNow');
 var login = document.querySelector('.login');
 var aboutBtn = document.querySelector('.about-btn');
-var popularCourses = document.querySelector('.container') 
+var popCoursesCont = document.querySelector('.container') 
 var courses = []
+var popCoursesList = []
 
-function getCourses() {
+// Sending request to the database for courses data
+function getPopCourses() {
   fetch("http://localhost:5000/api/courses")
     .then(function(data) {
       if (!data.ok) {
+	// If the request was not successful, throw an error that
+	// will be handled in the catch block
       	throw new Error('Error Fetching Courses!');	
       }
+      // Returns data in json
       return data.json();
     })
-    .then(function(data) {
-      courses = data.courses;
-      console.log(courses);
-      popularCourses.innerHTML = courses.map((course)=>{
+    .then(function(res) {
+      res = res.courses; 
+      data = []
+
+      // Getting popular courses 
+      for (let dt of res) {
+	if (dt.is_popular) {
+	  data.push(dt);
+	}
+      }
+        
+      // Getting random 6 unique datas from data
+      for (let i = 0; i < 6; i++) {
+	var randomNumber = Math.floor(Math.random() * data.length);
+	while (popCoursesList.includes(data[randomNumber])) {
+          randomNumber = Math.floor(Math.random() * data.length);
+	}
+	popCoursesList.push(data[randomNumber]);
+      }
+      console.log(popCoursesList);
+      popCoursesCont.innerHTML = popCoursesList.map((course)=>{
 	return `
 	<div class="square" onclick="courseClick('${course.id}')">
           <img
@@ -27,7 +49,7 @@ function getCourses() {
       }).join("");
     })
     .catch(function(error) {
-      popularCourses.innerHTML = `<p class='courseError'>Error Fetching Courses</p>`;
+      popCoursesCont.innerHTML = `<p class='courseError'>Error Fetching Courses</p>`;
     })
 }
 
@@ -52,4 +74,4 @@ aboutBtn.addEventListener('click', function () {
   location.href = 'about.html';
 });
 
-//getCourses()
+getPopCourses()
