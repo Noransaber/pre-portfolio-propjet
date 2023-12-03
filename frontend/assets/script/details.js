@@ -1,10 +1,13 @@
 let course_tit = document.querySelector("#course-tit");
 let course_desc = document.querySelector("#course-desc");
 let course_likes = document.querySelector("#tot-likes");
+let video_cont = document.querySelector(".video-container");
 let userDet = localStorage.getItem("user-data");
 let course = {};
+let course_videos = [];
 
-function verifySignIn() {
+
+function course_render() {
   if (!userDet) {
     alert("You need to be signed in to access this page!");
     location.href = "index.html";
@@ -29,10 +32,25 @@ function verifySignIn() {
       return res.json();
     })
     .then((res)=>{
+      // Updating the course info with the course data
       course = res.course;
       course_desc.innerText = course.description;
       course_tit.innerText = course.title;
       course_likes.innerText = `TOTAL LIKES: ${course.likes}`;
+
+      // Updating the course videos with the video values of the course data
+      course_videos = course.videos;
+      console.log(course_videos);
+      video_cont.innerHTML = course_videos.map((video)=>{
+        console.log(video);
+        return `
+          <div class="video-details">    
+            <div class="video-title">    
+              <h3>${video.title}</h3>    
+            </div>    
+            <div class="video">${video.embed_link}</div>    
+          </div>`
+      }).join("");
     })
     .catch((err)=>{
       console.error(err.message);
@@ -41,5 +59,4 @@ function verifySignIn() {
 }
 
 
-
-verifySignIn();
+//course_render();
