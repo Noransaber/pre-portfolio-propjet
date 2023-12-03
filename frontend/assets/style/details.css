@@ -98,3 +98,32 @@ iframe {
     height: 28.5px;
     border-radius: 10px;
 }
+.heart{
+  position: absolute;
+  width: 45px;
+  height: 40px;
+  background-color: #191919;
+  border-radius: 5px;
+  top: 2%;
+  right: 17%;
+}
+.video .clock {
+  position: absolute;
+  width: 45px;
+  height: 40px;
+  background-color: #191919;
+  border-radius: 5px;
+  top: 10%;
+  right: 17%;
+
+}
+.video .share {
+  position: absolute;
+  width: 45px;
+  height: 40px;
+  background-color: #191919;
+  border-radius: 5px;
+  top: 18%;
+  right: 17%;
+
+}
