@@ -48,7 +48,7 @@ function course_render() {
             <div class="video-title">    
               <h3>${video.title}</h3>    
             </div>    
-            <div class="video"></div>    
+            <div class="video">${video.embed_link}</div>    
           </div>`
       }).join("");
     })
@@ -59,4 +59,4 @@ function course_render() {
 }
 
 
-course_render();
+//course_render();
