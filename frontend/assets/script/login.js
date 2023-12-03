@@ -1,3 +1,6 @@
+form = document.querySelector(".fr")
+subButton = document.querySelector(".submit-btn")
+
 // Funtion adjust the curson in sign up and log in form
     function adjustingCursorInForm() {
         // Select the cursor
@@ -23,4 +26,63 @@
             $clamp(box, { clamp: 6 });
         });
     }
-    adjustingCursorInForm()
+
+// Adding events on the log in button of the log in page that fetches user
+// details from backed database based on given login credentials
+// All response error are managed
+subButton.addEventListener("click", (e)=>{
+  e.preventDefault();
+  
+  let formData = new FormData(form);
+  let email_ = ""
+  let password_ = ""
+  
+  for (const pair of formData.entries()) {
+    if (pair[0] === "email") email_ = pair[1];
+    if (pair[0] === "password") password_ = pair[1];
+  }
+  
+  if (!email_ || !password_) {
+    alert("Login Credentials not complete, check and try again!");
+  } else {
+    subButton.value = "loading...";
+
+    let params = {email: email_, password: password_}
+    let param = new URLSearchParams(params);
+    let fullurl = `http://localhost:5000/api/users?${param}`
+    fetch(fullurl)
+    .then((res)=>{
+      if (!res.ok) {
+	if (res.status == 404) {
+	  alert("User not found, ensure your details are correctly typed or kindly sign up if you're new");
+	}
+	if (res.status == 500) {
+	  alert("Database error, please try again later");
+	}
+	throw new Error(res.status);	
+      }
+
+      return res.json();
+    })
+    .then((res)=>{
+      let user = res.user
+      console.log(user);
+      let userDict = {
+	name: user.name,
+	id: user.id,
+	selected_course: null
+      }
+
+      localStorage.setItem("user-data", JSON.stringify(userDict));
+      location.href = "index.html";
+      subButton.value = "Log In";
+    })
+    .catch((err)=>{
+      subButton.value = "Log In";
+      console.log(err);
+    })
+  }
+})
+
+
+adjustingCursorInForm()

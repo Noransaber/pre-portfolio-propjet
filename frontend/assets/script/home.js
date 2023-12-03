@@ -36,7 +36,7 @@ function getPopCourses() {
 	}
 	popCoursesList.push(data[randomNumber]);
       }
-      console.log(popCoursesList);
+      
       popCoursesCont.innerHTML = popCoursesList.map((course)=>{
 	return `
 	<div class="square" onclick="courseClick('${course.id}')">
@@ -54,7 +54,15 @@ function getPopCourses() {
 }
 
 function courseClick(course_id) {
- console.log(course_id);
+  let user = localStorage.getItem("user-data");
+  
+  if (!user) {
+    alert("You have to sign in to access the course");
+  } else {
+    user = JSON.parse(user);
+    user.selected_course = course_id;
+    location.href = "details.html"
+  }
 }
 
 // Make an even, When we click on the button
