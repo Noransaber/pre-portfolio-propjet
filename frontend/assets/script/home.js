@@ -61,6 +61,7 @@ function courseClick(course_id) {
   } else {
     user = JSON.parse(user);
     user.selected_course = course_id;
+    localStorage.setItem("user-data", JSON.stringify(user));
     location.href = "details.html"
   }
 }

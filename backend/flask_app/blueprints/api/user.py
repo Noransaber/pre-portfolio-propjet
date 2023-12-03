@@ -24,7 +24,7 @@ def users_get():
 
     u_objects = db.get_table(User)
     if u_objects is None:
-        abort(500, description="The database has encountered an error, please tr      y again")
+        abort(500, description="The database has encountered an error, please try again")
 
     user = {}
     for user_obj in u_objects:
@@ -39,6 +39,24 @@ def users_get():
     if len(user) == 0:
         abort(404, description="User not found")
     
+    res = jsonify({"user": user})
+    res.status_code = 200
+    return res
+
+@api_blueprint.route("/users/<string:id>", methods=["GET"])
+def users_get_by_id(id):
+    """
+    Route that fetches a user whose id matches the provided id
+    """
+    user = db.get_row(User, str(id))
+    if user is None:
+        abort(500, description="The database has encountered an error, please tr  y again")
+    if not user:
+        abort(404, description="No user matches the provided id")
+
+    user = to_dict(user)
+    if "password" in user:
+        del user["password"]
     res = jsonify({"user": user})
     res.status_code = 200
     return res

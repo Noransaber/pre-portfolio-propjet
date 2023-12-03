@@ -37,7 +37,7 @@ def courses():
 @api_blueprint.route("/courses/<string:arg>")
 def course(arg):
     """
-    Route that returns a course that matches with the provided is or title
+    Route that returns a course that matches with the provided id or title
     """
     c_objects = db.get_table(Course)
     if c_objects is None:
