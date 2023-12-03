@@ -80,8 +80,7 @@ button.hover-me:hover {
 }
 .video-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   position: relative;
 }
 iframe {
