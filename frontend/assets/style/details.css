@@ -63,7 +63,7 @@ button.hover-me:hover {
   justify-content: center;
   align-items: center;
 }
-.container .video-title h3 {
+.video-container .video-title h3 {
   font-size: 35px;
   text-align: center;
   color: var(--main);
@@ -78,12 +78,10 @@ button.hover-me:hover {
   height: 500px;
   position: relative;
 }
-.container {
+.video-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin-top: 50px;
   position: relative;
 }
 iframe {
@@ -100,16 +98,3 @@ iframe {
     height: 28.5px;
     border-radius: 10px;
 }
-/* .video span {
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    background-color: #0d0c0b;
-    position: absolute;
-    width: 74px;
-    top: 91.4%;
-    right: 17%;
-    height: 32.5px;
-
-
-} */
