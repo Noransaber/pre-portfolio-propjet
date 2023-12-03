@@ -9,7 +9,6 @@
   background-image: url('https://images.unsplash.com/photo-1632772997943-59054ae89290?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-size: cover;
   background-repeat: no-repeat;
-  position: relative;
 }
 .courses-detail .info-div {
   background-color: black;
@@ -17,7 +16,7 @@
   height: 300px;
   color: white;
   position: absolute;
-  top: 9%;
+  top: 17%;
   left: 33%;
   text-align: center;
   box-shadow: 20px 10px;
@@ -62,32 +61,69 @@ button.hover-me:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 120px;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 129%;
+  background-color: transparent;
+  /* border: 4px solid white; */
+  z-index: 1;
+  border-left: 2px solid #000;
+  border-right: 41px solid #000;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+.video-container .video-title  {
+  position: relative;
 }
 .video-container .video-title h3 {
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
   color: var(--main);
-  letter-spacing: 10px;
+  letter-spacing: 8px;
+  position: absolute;
 }
 
 .video {
   display: block;
   align-items: center;
   text-align: center;
-  width: 1000px;
-  height: 500px;
+  width: 850px;
+  height: 450px;
   position: relative;
+  margin-top: 100px;
 }
 .video-container {
   display: flex;
   flex-direction: column;
-  position: relative;
+  /* position: relative; */
 }
+
 iframe {
   width: 100%;
-  height: 100%;
+  height: 129%;
+  border-radius: 0px 0px 206px 0px;
 }
-.video::after {
+.iframe-video {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.iframe-video::before{
+  content: "";
+  width: 50px;
+  height: 32.5px;
+  background-color: #030303;
+  bottom: -16%;
+  left: 91%;
+  position: absolute;
+}
+/* .video::after {
     content: "";
     background-color: #191919;
     position: absolute;
@@ -96,15 +132,15 @@ iframe {
     width: 65px;
     height: 28.5px;
     border-radius: 10px;
-}
-.heart{
+} */
+/* .heart{
   position: absolute;
   width: 45px;
   height: 40px;
   background-color: #191919;
   border-radius: 5px;
-  top: 2%;
-  right: 17%;
+  top: 3%;
+  right: 0.5%;
 }
 .video .clock {
   position: absolute;
@@ -112,9 +148,8 @@ iframe {
   height: 40px;
   background-color: #191919;
   border-radius: 5px;
-  top: 10%;
-  right: 17%;
-
+  top: 11.5%;
+  right: 0.5%;
 }
 .video .share {
   position: absolute;
@@ -122,7 +157,11 @@ iframe {
   height: 40px;
   background-color: #191919;
   border-radius: 5px;
-  top: 18%;
-  right: 17%;
+  top: 20%;
+  right: 0.5%;
+} */
 
+body:not(.showfocus) .player a, body:not(.showfocus) .player button, body:not(.showfocus) .player li, body:not(.showfocus) .player span, body:not(.showfocus) .player svg {
+  outline: 0!important;
+  display: none !important;
 }
