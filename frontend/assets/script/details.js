@@ -64,4 +64,4 @@ function course_render() {
 }
 
 
-course_render();
+//course_render();
