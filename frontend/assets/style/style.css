@@ -3,6 +3,7 @@
   min-height: 100vh;
   background-image: url('../../img/carousel-1.jpg');
   background-size: cover;
+  background-position: center;
   position: relative;
   width: 100%;
 }
@@ -10,6 +11,10 @@
 @media (max-width: 767px) {
   .landing .text-cont .title {
     font-size: 20px !important;
+  }
+  .landing {
+    max-width: 100%;
+    background-position: center;
   }
 }
 /* Small deivces */
