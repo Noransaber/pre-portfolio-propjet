@@ -400,19 +400,24 @@ p {
   line-height: 2;
   font-size: 16px;
   color: gray;
-  font-weight: bold
-}
-.about-us .right-sec .p1 {
-  margin-bottom: 20px;
+  line-height: 2.5;
+
 }
  img.github-link {
   width: 114px;
   height: 34px;
-  margin-bottom: 70px;
-}
-.about-us .right-sec .p2 {
   margin-bottom: 20px;
+  margin-top: 20px;
 }
+.alx-link{
+  width: 50px;
+  height: 27px;
+  margin-bottom: 70px;
+  margin-top: 20px;
+}
+/* .about-us .right-sec .p2 {
+  margin-bottom: 20px;
+} */
 .about-us .about-btn {
   padding: 20px;
   border: none;
