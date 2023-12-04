@@ -116,40 +116,44 @@ p {
     background-image: url('https://images.unsplash.com/photo-1558021212-51b6ecfa0db9?q=80&w=1783&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-position: center;
     background-repeat: no-repeat;
-    margin: 20px  auto !important;
+    margin: 20px auto !important;
   }
-  .top, .right, .bottom {
+  .top,
+  .right,
+  .bottom {
     display: none;
   }
-  .boxes  .card-1 {
+  .boxes .card-1 {
     top: 2% !important;
   }
-  .boxes  .card-2 {
+  .boxes .card-2 {
     top: 35% !important;
   }
-  .boxes  .card-3 {
+  .boxes .card-3 {
     top: 68% !important;
   }
-.boxes .card-3, .card-2, .card-1 {
- left: 72px !important; 
-  width: 207px !important;
-  height: 277px  !important;
-  position: absolute !important;
+  .boxes .card-3,
+  .card-2,
+  .card-1 {
+    left: 72px !important;
+    width: 207px !important;
+    height: 277px !important;
+    position: absolute !important;
   }
-.boxes .card i {
-  font-size: 15px !important;
-}
-.boxes .card h3 {
-  font-size: 10px !important;
-}
-.boxes .card p {
-  font-weight: bold;
-  width: 80px;
-  font-size: 12px !important;
-}
+  .boxes .card i {
+    font-size: 15px !important;
+  }
+  .boxes .card h3 {
+    font-size: 10px !important;
+  }
+  .boxes .card p {
+    font-weight: bold;
+    width: 80px;
+    font-size: 12px !important;
+  }
 }
 /* small screen rules */
-@media (min-width: 768px) and (max-width: 991px){
+@media (min-width: 768px) and (max-width: 991px) {
   .feature {
     height: 120vh;
   }
@@ -162,42 +166,44 @@ p {
     background-repeat: no-repeat;
     margin: 100px auto;
   }
-  .top, .right, .bottom {
+  .top,
+  .right,
+  .bottom {
     display: none;
   }
-  .boxes  .card-1 {
+  .boxes .card-1 {
     top: 2% !important;
-    left: 3% !important
+    left: 3% !important;
   }
-  .boxes  .card-2 {
+  .boxes .card-2 {
     top: 2% !important;
     left: 69% !important;
   }
-  .boxes  .card-3 {
+  .boxes .card-3 {
     top: 69% !important;
     left: 35% !important;
   }
-.boxes .card-3, .card-2, .card-1 {
-
-  width: 207px !important;
-  height: 277px  !important;
-  position: absolute !important;
+  .boxes .card-3,
+  .card-2,
+  .card-1 {
+    width: 207px !important;
+    height: 277px !important;
+    position: absolute !important;
   }
-.boxes .card i {
-  font-size: 15px !important;
+  .boxes .card i {
+    font-size: 15px !important;
+  }
+  .boxes .card h3 {
+    font-size: 10px !important;
+  }
+  .boxes .card p {
+    line-height: 2;
+    font-weight: bold;
+    width: 80px;
+    font-size: 12px !important;
+  }
 }
-.boxes .card h3 {
-  font-size: 10px !important;
-
-}
-.boxes .card p {
-  line-height: 2;
-  font-weight: bold;
-  width: 80px;
-  font-size: 12px !important;
-}
-}
-@media (min-width: 992px) and (max-width: 1199px){
+@media (min-width: 992px) and (max-width: 1199px) {
   .image {
     position: relative;
     max-width: 100%;
@@ -207,49 +213,50 @@ p {
     background-repeat: no-repeat;
     margin: 100px auto;
   }
-  .top, .right, .bottom {
-    display: none ;
+  .top,
+  .right,
+  .bottom {
+    display: none;
   }
-  .boxes  .card-1 {
+  .boxes .card-1 {
     top: 2% !important;
     left: 3% !important;
   }
-  .boxes  .card-2 {
+  .boxes .card-2 {
     top: 2% !important;
     left: 69% !important;
   }
-  .boxes  .card-3 {
+  .boxes .card-3 {
     top: 52% !important;
     left: 35% !important;
   }
-.boxes .card-3, .card-2, .card-1 {
-  width: 207px !important;
-  height: 277px  !important;
-  position: absolute !important;
+  .boxes .card-3,
+  .card-2,
+  .card-1 {
+    width: 207px !important;
+    height: 277px !important;
+    position: absolute !important;
   }
-.boxes .card i {
-  font-size: 15px !important;
+  .boxes .card i {
+    font-size: 15px !important;
+  }
+  .boxes .card h3 {
+    font-size: 10px !important;
+  }
+  .boxes .card p {
+    line-height: 2;
+    font-weight: bold;
+    width: 80px;
+    font-size: 12px !important;
+  }
 }
-.boxes .card h3 {
-  font-size: 10px !important;
-
-
-}
-.boxes .card p {
-  line-height: 2;
-  font-weight: bold;
-  width: 80px;
-  font-size: 12px !important;
-}
-}
-
 
 @media (min-width: 1200px) {
   .image {
     position: relative;
     width: 1067px;
     height: 450px;
-    background-image: url("https://images.unsplash.com/photo-1558021212-51b6ecfa0db9?q=80&w=1783&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-image: url('https://images.unsplash.com/photo-1558021212-51b6ecfa0db9?q=80&w=1783&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-position: center;
     background-repeat: no-repeat;
     margin: 100px auto;
@@ -261,16 +268,14 @@ p {
     background-color: var(--main);
     top: -50px;
     right: 0px;
-  
   }
   .right {
-  position: absolute;
-  height: 451px;
-  width: 50px;
-  background-color: var(--main);
-  top: 0px;
-  right: 0;
-  
+    position: absolute;
+    height: 451px;
+    width: 50px;
+    background-color: var(--main);
+    top: 0px;
+    right: 0;
   }
   .bottom {
     position: absolute;
@@ -285,7 +290,7 @@ p {
     background-color: #c5b6ae;
     max-width: 100%;
     height: 425px;
-    position: absolute; 
+    position: absolute;
     top: 66%;
     text-align: left;
     display: flex;
@@ -303,7 +308,7 @@ p {
     font-weight: bold;
     width: fit-content;
   }
-} 
+}
 .image {
   position: relative;
   width: 1067px;
@@ -490,15 +495,14 @@ p {
   font-size: 16px;
   color: gray;
   line-height: 2.5;
-
 }
- img.github-link {
+img.github-link {
   width: 114px;
   height: 34px;
   margin-bottom: 20px;
   margin-top: 20px;
 }
-.alx-link{
+.alx-link {
   width: 50px;
   height: 27px;
   margin-bottom: 70px;
@@ -534,13 +538,13 @@ p {
   margin: 0;
 }
 .courses-sec .pop-span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--main);
-    font-size: 20px;
-    position: relative;
-    font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main);
+  font-size: 20px;
+  position: relative;
+  font-weight: bold;
 }
 .courses-sec .pop-span::before {
   content: '';

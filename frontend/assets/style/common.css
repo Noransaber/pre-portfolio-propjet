@@ -303,10 +303,10 @@ a {
   }
   .container {
     display: grid !important;
-    grid-template-columns: repeat(1, minmax(200px, 1fr)) !important;
+    grid-template-columns: repeat(1, minmax(100px, 1fr)) !important;
     gap: 30px !important;
-    margin: 30px 0px 30px 30px !important;
-    padding-left: 30px;
+    place-items: center;
+    margin: 30px auto !important;
   }
 }
 /* small screen rules */
