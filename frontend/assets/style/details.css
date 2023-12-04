@@ -18,10 +18,9 @@
     height: 60vh;
   }
   .courses-detail .info-div {
-   width: 500px !important;
-   height: 300px !important;
-   transform: translate(-31%, 25%);
-
+    width: 500px !important;
+    height: 300px !important;
+    transform: translate(-31%, 25%);
   }
   .courses-detail .info-div h1 {
     font-size: 25px !important;
@@ -35,8 +34,8 @@
   .video-details {
     margin: 0px !important;
   }
-  
-  iframe  {
+
+  iframe {
     max-width: 100%;
     padding: 0 !important;
     margin-top: 0 !important;
@@ -44,7 +43,6 @@
   .video-container h3 {
     font-size: 18px !important;
   }
-
 }
 .courses-detail .info-div {
   background-color: black;
@@ -108,7 +106,6 @@ button.hover-me:hover {
 .video-container {
   display: flex;
   flex-direction: column;
-  
 }
 
 iframe {

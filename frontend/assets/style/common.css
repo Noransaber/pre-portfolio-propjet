@@ -137,7 +137,6 @@ body {
 @media (max-width: 767px) {
   .about-land {
     max-width: 100%;
-    /* width: 767px; */
   }
 
   .about-land .about-text span {
@@ -373,7 +372,6 @@ img {
   width: 250px;
   margin: 0 0 0 20px;
 }
-
 
 /* Courses section */
 /* Responsivness */
