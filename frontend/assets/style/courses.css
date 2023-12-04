@@ -5,11 +5,27 @@
 .courses-sec {
   margin-top: 40px;
 }
+/* Responsivness */
 @media (max-width: 767px) {
    .courses-sec .top {
     font-size: 30px !important;
     font-weight: bold;
   }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+.courses-sec .container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 30px;
+}
+.courses-sec .top {
+  font-size: 25px !important;
+  font-weight: bold;
+}
+
+
+ 
 }
 .courses-sec span,
 .courses-sec p {
