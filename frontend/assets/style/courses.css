@@ -5,6 +5,12 @@
 .courses-sec {
   margin-top: 40px;
 }
+@media (max-width: 767px) {
+   .courses-sec .top {
+    font-size: 30px !important;
+    font-weight: bold;
+  }
+}
 .courses-sec span,
 .courses-sec p {
   padding: 0;
