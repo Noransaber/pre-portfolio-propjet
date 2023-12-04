@@ -295,8 +295,12 @@ a {
 
 /* small screen rules */
 @media (max-width: 767px) {
-  .courses-sec p {
-    font-size: 30px !important;
+  .courses-sec .pop {
+    font-size: 20px !important;
+    font-weight: bold;
+  }
+  .courses-sec .desc {
+    font-size: 16px !important;
   }
   .container {
     display: grid !important;
