@@ -1,5 +1,8 @@
-form = document.querySelector(".fr")
-subButton = document.querySelector(".submit-btn")
+let createBtn = document.querySelector(".submit-btn")
+let fnameEle = document.querySelector("#fname")
+let emailEle = document.querySelector("#email")
+let passwordEle = document.querySelector("#Password")
+
 
 // Funtion adjust the curson in sign up and log in form
     function adjustingCursorInForm() {
@@ -25,66 +28,70 @@ subButton = document.querySelector(".submit-btn")
         document.querySelectorAll(".projcard-description").forEach(function (box) {
             $clamp(box, { clamp: 6 });
         });
+}
+
+
+createBtn.addEventListener("click", function(e){
+  e.preventDefault();
+
+  createBtn.value = "...";
+
+  let fname = fnameEle.value;
+  let email = emailEle.value;
+  let password = passwordEle.value;
+
+  if (!fname || !email || !password) {
+    alert("Credentials not complete, check and try again!");
+    createBtn.value = "Create account";
+  } else {
+
+    let params = {
+      name: fname,
+      email: email,
+      password: password
+    }
+    let headers = {
+      'Content-Type': 'application/json'
     }
 
-// Adding events on the log in button of the log in page that fetches user
-// details from backed database based on given login credentials
-// All response error are managed
-subButton.addEventListener("click", (e)=>{
-  e.preventDefault();
-  
-  let formData = new FormData(form);
-  let email_ = ""
-  let password_ = ""
-  
-  for (const pair of formData.entries()) {
-    if (pair[0] === "email") email_ = pair[1];
-    if (pair[0] === "password") password_ = pair[1];
-  }
-  
-  if (!email_ || !password_) {
-    alert("Login Credentials not complete, check and try again!");
-  } else {
-    subButton.value = "loading...";
-
-    let params = {email: email_, password: password_}
-    let param = new URLSearchParams(params);
-    let fullurl = `http://localhost:5000/api/users?${param}`
-    fetch(fullurl)
+    // Sending out the data to DB
+    fetch("http://localhost:5000/api/users", {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify(params)
+    })
     .then((res)=>{
       if (!res.ok) {
-	if (res.status == 404) {
-	  alert("User not found, ensure your details are correctly typed or kindly sign up if you're new");
-	}
-	if (res.status == 500) {
-	  alert("Database error, please try again later");
-	}
-	throw new Error(res.status);	
+        if (res.status == 500) {
+          alert("Internal Server Error, please try again");
+        }
+        throw new Error(res.status);
       }
 
       return res.json();
     })
     .then((res)=>{
-      let user = res.user
+      alert("Account Created successfully");
+      let user = res.user;
       let userDict = {
-	name: user.name,
-	id: user.id,
-	selected_course: null
+        name: user.name,
+        id: user.id,
+        selected_course: null
       }
-
       localStorage.setItem("user-data", JSON.stringify(userDict));
       if (localStorage.getItem("likes-reg")) {
         localStorage.removeItem("likes-reg");
       }
       location.href = "index.html";
-      subButton.value = "Log In";
+      createBtn.value = "Create account";
     })
     .catch((err)=>{
-      subButton.value = "Log In";
+      alert("An error as occured, please try again later");
+      createBtn.value = "Create account";
       console.error(err);
     })
   }
 })
 
 
-adjustingCursorInForm()
+adjustingCursorInForm();
