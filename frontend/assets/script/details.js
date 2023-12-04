@@ -47,7 +47,7 @@ function course_render() {
               <h3>${video.title}</h3>    
             </div>    
             <div class="video">
-              '${video.embed_link}'
+              ${video.embed_link}
               <div class='heart'></div>    
               <div class='clock'></div>    
               <div class='share'></div> 
@@ -108,4 +108,4 @@ likeBt.addEventListener("click", ()=> {
   }
 });
 
-//course_render();
+course_render();

@@ -19,7 +19,7 @@ function getPopCourses() {
     })
     .then(function(res) {
       res = res.courses; 
-      data = []
+      let data = []
 
       // Getting popular courses 
       for (let dt of res) {
@@ -50,6 +50,7 @@ function getPopCourses() {
     })
     .catch(function(error) {
       popCoursesCont.innerHTML = `<p class='courseError'>Error Fetching Courses</p>`;
+      console.error(error);
     })
 }
 
