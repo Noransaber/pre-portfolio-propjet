@@ -1,4 +1,5 @@
 var user = localStorage.getItem('user-data');
+var reLikes = localStorage.getItem('likes-reg');
 var JoinNow = document.querySelector('.joinNow');
 var login = document.querySelector('.login');
 var aboutBtn = document.querySelector('.about-btn');
@@ -53,6 +54,34 @@ function checkUserSignIn() {
   }
 }
 
+function checkRegLikes() {
+  if (user && !reLikes) {
+    let usr = JSON.parse(user);
+    let params = {user_id: usr.id}
+    let param = new URLSearchParams(params);
+    let fullurl = `http://localhost:5000/api/registered?${param}`
+    fetch(fullurl)
+    .then((res)=>{
+      if (!res.ok) {
+        throw new Error(res.status);  
+      }
+
+      return res.json();
+    })
+    .then((res)=>{
+      res = res.registered_courses
+      let course_ids = []
+      for (const regCourse of res) {
+        course_ids.push(regCourse.course_id);
+      }
+      localStorage.setItem("likes-reg", JSON.stringify(course_ids))
+    })
+    .catch((err)=>{
+      console.error(err);
+    })
+  }
+}
+
 if (showCourse) {
   showCourse.addEventListener('click', function () {
     // It render the signup.html page
@@ -61,3 +90,4 @@ if (showCourse) {
 }
 
 checkUserSignIn();
+checkRegLikes();

@@ -5,7 +5,7 @@ let video_cont = document.querySelector(".video-container");
 let userDet = localStorage.getItem("user-data");
 let course = {};
 let course_videos = [];
-
+let likeBtn = document.querySelector(".likeBt");
 
 function course_render() {
   if (!userDet) {
@@ -40,16 +40,14 @@ function course_render() {
 
       // Updating the course videos with the video values of the course data
       course_videos = course.videos;
-      console.log(course_videos);
       video_cont.innerHTML = course_videos.map((video)=>{
-        console.log(video);
         return `
           <div class="video-details">    
             <div class="video-title">    
               <h3>${video.title}</h3>    
             </div>    
             <div class="video">
-              ${video.embed_link}
+              '${video.embed_link}'
               <div class='heart'></div>    
               <div class='clock'></div>    
               <div class='share'></div> 
@@ -63,5 +61,51 @@ function course_render() {
   }
 }
 
+likeBt.addEventListener("click", ()=> {
+  if (userDet) {
+    likeBt.innerText = "..."
+
+    let dt = JSON.parse(userDet);
+    let userId = dt.id;
+    let courseId = dt.selected_course;
+    let courseTitle = course_tit.innerText;
+
+    let rLikes = localStorage.getItem("likes-reg")
+    if (JSON.stringify(rLikes).includes(courseId)) {
+      alert("You already liked the course!");
+      likeBt.innerText = "LIKE"
+      return
+    }
+   
+    let postData = {
+      course_id: courseId,
+      user_id: userId,
+      course_title: courseTitle
+    }
+    fetch("http://localhost:5000/api/registered", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(postData)
+    })
+    .then((res)=>{
+      if (!res.ok) {
+        throw new Error(res.status)
+      }
+      return res.json()
+    })
+    .then((res)=>{
+      rLikes = JSON.parse(rLikes)
+      rLikes.push(res.registered_course.course_id)
+      localStorage.setItem("likes-reg", JSON.stringify(rLikes))
+      likeBt.innerText = "LIKE"
+    })
+    .catch((err)=>{
+      likeBt.innerText = "LIKE"
+      console.error(err);
+    })
+  }
+});
 
 //course_render();

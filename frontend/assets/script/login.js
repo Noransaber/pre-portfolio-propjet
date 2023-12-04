@@ -66,7 +66,6 @@ subButton.addEventListener("click", (e)=>{
     })
     .then((res)=>{
       let user = res.user
-      console.log(user);
       let userDict = {
 	name: user.name,
 	id: user.id,

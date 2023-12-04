@@ -39,6 +39,9 @@ params = {
 response = get(endpoint, headers=headers, params=params)
 
 res = response.json()
+paging = res["paging"]
+paging = paging.get("next")
+
 response_data = res["data"]
 
 new_course = Course(
@@ -50,33 +53,80 @@ new_course = Course(
         )
 res = db.add(new_course)
 print(res)
+print("Course added, adding videos...")
+time.sleep(2)
 print()
 
 # Extracting information for the first video
+count = 1
+page = 2
+added = 0
 for video in response_data:
+    issue = "N";
+    
+    privacy = video['privacy']
+    view = privacy.get("view")
+    embed = privacy.get("embed")
+
+    if view != "anybody" or embed != "public":
+        issue = "P"
+
     # Extracting details
     title = video['name']
     html_embed_code = video['embed']['html']
-    
-    if not title:
-        continue
 
     if len(title) >= 200:
         title = title[:186] + "..."
 
-    if not html_embed_code or len(html_embed_code) > 1000:
-        continue
-        
-    new_video = Video(
-            title=title,
-            id=str(uuid4()),
-            course_id=new_course.id,
-            embed_link=html_embed_code
-            )
+    if not html_embed_code or (html_embed_code) > 999:
+        issue = "L"
+       
+    if issue == "P":
+        print("Privacy Issue")
+    elif issue == "L":
+        print("Embed link issue")
+    elif issue == "N":
+        new_video = Video(
+                title=title,
+                id=str(uuid4()),
+                course_id=new_course.id,
+                embed_link=html_embed_code
+                )
 
-    new_video.course = db.get_row(Course, new_course.id)
-    res = db.add(new_video)
-    print(title)
-    print(res)
+        new_video.course = db.get_row(Course, new_course.id)
+        res = db.add(new_video)
+        print(res)
+        print(f"{title} Video Added")
+        added += 1
+
+    print(f"Count: {count}")
     print()
+    
+    if (count >= len(response_data)):
+        print("Page completed")
+        if paging:
+            print("Another Page available. Proceed?")
+            des = input("(Y/N)=> ")
+            if des.lower() == "n":
+                break
+            if des.lower() not in  ["n", "y"]:
+                print("Wrong input, Exiting anyway")
+                break
+            params = {
+                    "query": query,
+                    "page": page}
+            response = get(endpoint, headers=headers, params=params)
+            res = response.json()
+            page += 1
+            print(paging)
+            paging = res["paging"]
+            paging = paging.get("next")
+            response_data.extend(res["data"])
+            print()
+    
+    count += 1
     time.sleep(1)
+
+print()
+print(f"Total videos: {count - 1}")
+print(f"Added: {added}")

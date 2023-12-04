@@ -33,9 +33,6 @@ def registered_get():
         if user_id == db_user_id:
             registered_c.append(r_dict)
 
-    if len(registered_c) == 0:
-        abort(404, description="No registered courses found")
-
     res = jsonify({"registered_courses": registered_c})
     res.status_code = 200
     return res
@@ -66,12 +63,12 @@ def registered_post():
             (d_user_id, User)
             ]
     for param in course_user:
-        if len(db.get_row(param[1], param[0])) == 0:
-            des = "No {} linked to the provided id".format(param[1].__name__)
-            abort(400, description=des)
         if db.get_row(param[1], param[0]) is None:
             des = "Internal database problem, try again"
             abort(500, description=des)
+        elif not db.get_row(param[1], param[0]):
+            des = "No {} linked to the provided id".format(param[1].__name__)
+            abort(400, description=des)
 
     new_registered_course = Registered(
             id=str(uuid4()),
@@ -80,9 +77,13 @@ def registered_post():
             user_id=d_user_id
             )
     response = db.add(new_registered_course)
-
+    
     if response["data_added"] is False:
         abort(500, description="The database has encountered an error, please try again")
+
+    courseReg = db.get_row(Course, d_course_id)
+    courseReg.likes += 1
+    db.save()
 
     reg_c_dict = db.get_row(Registered, new_registered_course.id)
     reg_c_dict = to_dict(reg_c_dict)
