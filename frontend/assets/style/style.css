@@ -108,48 +108,142 @@ p {
   padding: 30px;
   background-color: #ddd;
 }
-/* @media (max-width: 767px) {
+@media (max-width: 767px) {
   .image {
     position: relative;
     max-width: 100%;
-    height: 225px;
-    background-image: url("https://images.unsplash.com/photo-1558021212-51b6ecfa0db9?q=80&w=1783&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    background-position: left;
+    height: 120vh !important;
+    background-image: url('https://images.unsplash.com/photo-1558021212-51b6ecfa0db9?q=80&w=1783&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 20px  auto !important;
+  }
+  .top, .right, .bottom {
+    display: none;
+  }
+  .boxes  .card-1 {
+    top: 2% !important;
+  }
+  .boxes  .card-2 {
+    top: 35% !important;
+  }
+  .boxes  .card-3 {
+    top: 68% !important;
+  }
+.boxes .card-3, .card-2, .card-1 {
+ left: 72px !important; 
+  width: 207px !important;
+  height: 277px  !important;
+  position: absolute !important;
+  }
+.boxes .card i {
+  font-size: 15px !important;
+}
+.boxes .card h3 {
+  font-size: 10px !important;
+}
+.boxes .card p {
+  font-weight: bold;
+  width: 80px;
+  font-size: 12px !important;
+}
+}
+/* small screen rules */
+@media (min-width: 768px) and (max-width: 991px){
+  .feature {
+    height: 120vh;
+  }
+  .image {
+    position: relative;
+    max-width: 100%;
+    height: 80vh;
+    background-image: url('https://images.unsplash.com/photo-1558021212-51b6ecfa0db9?q=80&w=1783&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-position: center;
     background-repeat: no-repeat;
     margin: 100px auto;
   }
   .top, .right, .bottom {
     display: none;
   }
-  
-.boxes .card {
-  padding: 20px;
-  background-color: #c5b6ae;
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: 33%;
-  text-align: left;
-  margin-left: 10%;
-  display: block;
- 
-}
+  .boxes  .card-1 {
+    top: 2% !important;
+    left: 3% !important
+  }
+  .boxes  .card-2 {
+    top: 2% !important;
+    left: 69% !important;
+  }
+  .boxes  .card-3 {
+    top: 69% !important;
+    left: 35% !important;
+  }
+.boxes .card-3, .card-2, .card-1 {
+
+  width: 207px !important;
+  height: 277px  !important;
+  position: absolute !important;
+  }
 .boxes .card i {
-  font-size: 18px !important;
-  color: #807179;
+  font-size: 15px !important;
 }
 .boxes .card h3 {
-  font-size: 11px !important;
-  color: #000000b3;
+  font-size: 10px !important;
+
 }
 .boxes .card p {
   line-height: 2;
-  color: gray;
   font-weight: bold;
-  width: fit-content;
+  width: 80px;
   font-size: 12px !important;
 }
 }
+@media (min-width: 992px) and (max-width: 1199px){
+  .image {
+    position: relative;
+    max-width: 100%;
+    height: 120vh;
+    background-image: url('https://images.unsplash.com/photo-1558021212-51b6ecfa0db9?q=80&w=1783&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 100px auto;
+  }
+  .top, .right, .bottom {
+    display: none ;
+  }
+  .boxes  .card-1 {
+    top: 2% !important;
+    left: 3% !important;
+  }
+  .boxes  .card-2 {
+    top: 2% !important;
+    left: 69% !important;
+  }
+  .boxes  .card-3 {
+    top: 52% !important;
+    left: 35% !important;
+  }
+.boxes .card-3, .card-2, .card-1 {
+  width: 207px !important;
+  height: 277px  !important;
+  position: absolute !important;
+  }
+.boxes .card i {
+  font-size: 15px !important;
+}
+.boxes .card h3 {
+  font-size: 10px !important;
+
+
+}
+.boxes .card p {
+  line-height: 2;
+  font-weight: bold;
+  width: 80px;
+  font-size: 12px !important;
+}
+}
+
+
 @media (min-width: 1200px) {
   .image {
     position: relative;
@@ -186,8 +280,6 @@ p {
     bottom: -325px;
     right: 0px;
   }
-  
-  
   .boxes .card {
     padding: 20px;
     background-color: #c5b6ae;
@@ -202,19 +294,16 @@ p {
 
   .boxes .card i {
     font-size: 28px !important;
-    color: #807179;
   }
   .boxes .card h3 {
     font-size: 21px !important;
-    color: #000000b3;
   }
   .boxes .card p {
     line-height: 2;
-    color: gray;
     font-weight: bold;
     width: fit-content;
   }
-} */
+} 
 .image {
   position: relative;
   width: 1067px;
