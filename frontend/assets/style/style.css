@@ -359,7 +359,7 @@ p {
   border-radius: 33px;
 }
 .about-us .right-sec {
-  max-width: 100%;
+  max-width: 50%;
   margin-right: 50px;
 }
 .about-us .right-sec span {
@@ -399,33 +399,19 @@ p {
 .about-us .right-sec p {
   line-height: 2;
   font-size: 16px;
-  color: var(--dark);
+  color: gray;
+  font-weight: bold
 }
 .about-us .right-sec .p1 {
   margin-bottom: 20px;
 }
+ img.github-link {
+  width: 114px;
+  height: 34px;
+  margin-bottom: 70px;
+}
 .about-us .right-sec .p2 {
   margin-bottom: 20px;
-}
-.about-us .right-sec ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-}
-.about-us .right-sec li {
-  color: var(--dark);
-  line-height: 1.5;
-  position: relative;
-}
-.about-us .right-sec li::before {
-  content: '';
-  position: absolute;
-  top: 52%;
-  left: -15%;
-  margin-top: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent transparent transparent #b1a6a4;
 }
 .about-us .about-btn {
   padding: 20px;
