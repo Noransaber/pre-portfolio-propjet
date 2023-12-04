@@ -448,13 +448,14 @@ p {
   padding: 0;
   margin: 0;
 }
-.courses-sec span {
+.courses-sec .pop-span {
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--main);
-  font-size: 18px;
+  font-size: 20px;
   position: relative;
+  font-weight: bold;
 }
 .courses-sec span::before {
   content: '';
@@ -474,7 +475,7 @@ p {
   top: 70%;
   left: 43%;
 }
-.courses-sec p {
+.courses-sec .pop-p {
   font-size: 50px;
   display: flex;
   justify-content: center;

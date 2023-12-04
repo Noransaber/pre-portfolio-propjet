@@ -295,7 +295,7 @@ a {
 
 /* small screen rules */
 @media (max-width: 767px) {
-  .courses-sec .pop {
+  .courses-sec .pop-p {
     font-size: 20px !important;
     font-weight: bold;
   }
@@ -310,37 +310,16 @@ a {
     padding-left: 30px;
   }
 }
-/* Mobile & Tablet Rules */
-/* @media (min-width: 768px) {
-
-  .container {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(200px, 1fr)) !important;
-    gap: 30px !important;
-    margin: 30px 0px 30px 30px !important;
-  }
-  .square .title {
-    font-size: 18px !important;
-
-  }
-  .square .desc {
-    font-size: 10px !important;
-
-  }
-} */
-/* Medium screen rules */
-@media (min-width: 992px) {
-  .container {
-    max-width: 100% !important;
-    display: grid !important;
-    grid-template-columns: repeat(3, minmax(250px, 1fr)) !important;
-    gap: 40px !important;
-    margin: 40px 0px 40px 40px !important;
+/* small screen rules */
+@media (min-width: 768px) {
+  .courses-sec .pop-p {
+    font-size: 30px !important;
+    font-weight: bold;
   }
 }
 
-/* Large devices rules */
-@media (min-width: 1200px) {
+/* Medium screen rules */
+@media (min-width: 992px) and (max-width: 1200px) {
   .container {
     max-width: 100% !important;
     display: grid !important;
