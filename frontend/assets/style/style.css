@@ -102,6 +102,126 @@ span, p {
     border-radius: 15px 0px;
 }
 
+/* Feature section */
+.feature {
+  margin-top: 50px;
+  height: 150vh;
+  padding: 30px;
+  background-color: #ddd;
+}
+.image {
+  position: relative;
+  width: 1067px;
+  height: 450px;
+  background-image: url("https://images.unsplash.com/photo-1558021212-51b6ecfa0db9?q=80&w=1783&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 100px auto;
+}
+.top {
+  position: absolute;
+  height: 50px;
+  width: 500px;
+  background-color: var(--main);
+  top: -50px;
+  right: 0px;
+
+}
+.right {
+position: absolute;
+height: 451px;
+width: 50px;
+background-color: var(--main);
+top: 0px;
+right: 0;
+
+}
+.bottom {
+  position: absolute;
+  height: 325px;
+  width: 500px;
+  background-color: var(--main);
+  bottom: -325px;
+  right: 0px;
+}
+
+
+.boxes .card {
+  padding: 20px;
+  background-color: #c5b6ae;
+  width: 322px;
+  height: 425px;
+  position: absolute;
+  top: 66%;
+  text-align: left;
+}
+.boxes .card-1 {
+  left: -75px;
+
+}
+.boxes .card-2 {
+  left: 29%;
+}
+.boxes .card-3 {
+  left: 64.8%;
+}
+.boxes .card i {
+  font-size: 28px;
+  color: #807179;
+}
+.boxes .card h3 {
+  font-size: 21px;
+  color: #000000b3;
+}
+.boxes .card p {
+  line-height: 2;
+  color: gray;
+  font-weight: bold;
+  width: fit-content;
+}
+
+.feature span{
+  color: var(--main);
+  font-weight: bold;
+  font-size: 25px;
+  position: relative;
+  left: 45%;
+}
+.feature span::before {
+  position: absolute;
+  content: "";
+  background-color: var(--dark);
+  width: 50px;
+  height: 2px;
+  left: 110%;
+  bottom: 26%;
+}
+
+.feature span::after{
+  position: absolute;
+  content: "";
+  background-color: var(--dark);
+  width: 37px;
+  height: 2px;
+  left: 111%;
+  bottom: 65%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ABOUT US SECTION */
 .about-us {
