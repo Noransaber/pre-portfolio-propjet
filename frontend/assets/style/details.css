@@ -29,6 +29,9 @@
     font-size: 14px !important;
     width: 400px !important;
   }
+  iframe {
+    margin: 0;
+  }
 
   /* Video section */
   .video-container {
@@ -37,6 +40,7 @@
   }
   .video-details {
     margin: 0px !important;
+    height: 250px !important;
   }
 
   iframe {
@@ -61,7 +65,6 @@
 }
 .courses-detail .info-div h1 {
   font-size: 40px;
-  letter-spacing: 2px;
   line-height: 0;
   padding: 10px;
 }
@@ -105,7 +108,6 @@ button.hover-me:hover {
   font-size: 25px;
   text-align: center;
   color: var(--main);
-  letter-spacing: 5px;
 }
 .video-container {
   display: flex;
