@@ -40,15 +40,12 @@ body {
   }
 }
 /* Small deivces rules */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 991px){
   .navbar .left-content i {
     display: none;
   }
   .navbar .left-content span {
     font-size: 20px !important;
-  }
-  .navbar .med-section input {
-    max-width: 220px;
   }
   .navbar .right-section a {
     font-size: 10px !important;
