@@ -302,11 +302,10 @@ a {
     font-weight: bold;
   }
   .courses-sec .square {
-    overflow: hidden !important
+    overflow: hidden !important;
   }
   .courses-sec .desc {
     font-size: 14px !important;
-    ;
   }
   .container {
     display: grid !important;
