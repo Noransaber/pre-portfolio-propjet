@@ -4,10 +4,11 @@ var allCourseBtn = document.querySelector('.all-courses-btn')
 var courses = []
 var popCoursesList = []
 var topCoursesList = []
+var host = "http://localhost:5000";
 
 // Sending request to the database for courses data
 function getCourses() {
-  fetch("http://localhost:5000/api/courses")
+  fetch(`${host}/api/courses`)
     .then(function(data) {
       if (!data.ok) {
 	// If the request was not successful, throw an error that

@@ -78,7 +78,7 @@ for video in response_data:
     if len(title) >= 200:
         title = title[:186] + "..."
 
-    if not html_embed_code or (html_embed_code) > 999:
+    if not html_embed_code or len(html_embed_code) > 999:
         issue = "L"
        
     if issue == "P":
@@ -105,6 +105,7 @@ for video in response_data:
     if (count >= len(response_data)):
         print("Page completed")
         if paging:
+            print(f"{added} videos added so far")
             print("Another Page available. Proceed?")
             des = input("(Y/N)=> ")
             if des.lower() == "n":

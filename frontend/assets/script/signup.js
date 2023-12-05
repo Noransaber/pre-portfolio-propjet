@@ -2,7 +2,7 @@ let createBtn = document.querySelector(".submit-btn")
 let fnameEle = document.querySelector("#fname")
 let emailEle = document.querySelector("#email")
 let passwordEle = document.querySelector("#Password")
-
+let host = "http://localhost:5000";
 
 // Funtion adjust the curson in sign up and log in form
     function adjustingCursorInForm() {
@@ -55,7 +55,7 @@ createBtn.addEventListener("click", function(e){
     }
 
     // Sending out the data to DB
-    fetch("http://localhost:5000/api/users", {
+    fetch(`${host}/api/users`, {
       method: 'POST',
       headers: headers,
       body: JSON.stringify(params)

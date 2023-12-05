@@ -6,6 +6,7 @@ let userDet = localStorage.getItem("user-data");
 let course = {};
 let course_videos = [];
 let likeBtn = document.querySelector(".likeBt");
+let host = "http://localhost:5000";
 
 function course_render() {
   if (!userDet) {
@@ -18,7 +19,7 @@ function course_render() {
       location.href = "index.html";
     }
 
-    let url = `http://localhost:5000/api/courses/${course_id}`;
+    let url = `${host}/api/courses/${course_id}`;
     fetch(url)
     .then((res)=>{
       if (!res.ok) {
@@ -36,7 +37,7 @@ function course_render() {
       course = res.course;
       course_desc.innerText = course.description;
       course_tit.innerText = course.title;
-      course_likes.innerText = `TOTAL LIKES: ${course.likes}`;
+      course_likes.innerText = course.likes;
 
       // Updating the course videos with the video values of the course data
       course_videos = course.videos;
@@ -82,7 +83,7 @@ likeBt.addEventListener("click", ()=> {
       user_id: userId,
       course_title: courseTitle
     }
-    fetch("http://localhost:5000/api/registered", {
+    fetch(`${host}/api/registered`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -99,6 +100,8 @@ likeBt.addEventListener("click", ()=> {
       rLikes = JSON.parse(rLikes)
       rLikes.push(res.registered_course.course_id)
       localStorage.setItem("likes-reg", JSON.stringify(rLikes))
+      var newLikes = parseInt(course_likes.innerText, 10) + 1;
+      course_likes.innerText = newLikes;
       likeBt.innerText = "LIKE"
     })
     .catch((err)=>{

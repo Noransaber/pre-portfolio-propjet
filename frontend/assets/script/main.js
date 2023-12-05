@@ -5,6 +5,7 @@ var login = document.querySelector('.login');
 var aboutBtn = document.querySelector('.about-btn');
 var logout = document.getElementById('logout');
 var showCourse = document.querySelector('.show-courses');
+var host_ = "http://localhost:5000";
 
 function checkUserSignIn() {
   if (user != null) {
@@ -28,7 +29,7 @@ function checkUserSignIn() {
       localStorage.removeItem("user-data");
       location.reload();
     } else {
-      let fullurl = `http://localhost:5000/api/users/${userDict.id}`    
+      let fullurl = `${host_}/api/users/${userDict.id}`    
       fetch(fullurl)    
       .then((res)=>{    
         if (!res.ok) {     
@@ -59,7 +60,7 @@ function checkRegLikes() {
     let usr = JSON.parse(user);
     let params = {user_id: usr.id}
     let param = new URLSearchParams(params);
-    let fullurl = `http://localhost:5000/api/registered?${param}`
+    let fullurl = `${host_}/api/registered?${param}`
     fetch(fullurl)
     .then((res)=>{
       if (!res.ok) {

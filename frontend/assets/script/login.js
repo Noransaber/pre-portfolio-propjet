@@ -1,5 +1,6 @@
-form = document.querySelector(".fr")
-subButton = document.querySelector(".submit-btn")
+let form = document.querySelector(".fr")
+let subButton = document.querySelector(".submit-btn")
+let host = "http://localhost:5000";
 
 // Funtion adjust the curson in sign up and log in form
     function adjustingCursorInForm() {
@@ -49,7 +50,7 @@ subButton.addEventListener("click", (e)=>{
 
     let params = {email: email_, password: password_}
     let param = new URLSearchParams(params);
-    let fullurl = `http://localhost:5000/api/users?${param}`
+    let fullurl = `${host}/api/users?${param}`
     fetch(fullurl)
     .then((res)=>{
       if (!res.ok) {
