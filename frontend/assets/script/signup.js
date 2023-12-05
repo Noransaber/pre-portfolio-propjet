@@ -31,6 +31,15 @@ let host = "http://localhost:5000";
 }
 
 
+function validateEmail(email) {
+  var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  if (emailRegex.test(email)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 createBtn.addEventListener("click", function(e){
   e.preventDefault();
 
@@ -43,8 +52,14 @@ createBtn.addEventListener("click", function(e){
   if (!fname || !email || !password) {
     alert("Credentials not complete, check and try again!");
     createBtn.value = "Create account";
+  } else if (!validateEmail(email)) {
+    alert("Invalid email format");
+    createBtn.value = "Create account";
+  } else if(password.length < 8) {
+    alert("Password must be 8 or more characters long");
+    createBtn.value = "Create account";
   } else {
-
+    // Creating new user data
     let params = {
       name: fname,
       email: email,
@@ -64,6 +79,9 @@ createBtn.addEventListener("click", function(e){
       if (!res.ok) {
         if (res.status == 500) {
           alert("Internal Server Error, please try again");
+        }
+        if (res.status == 409) {
+          alert("User with the email account already exist");
         }
         throw new Error(res.status);
       }
@@ -86,7 +104,7 @@ createBtn.addEventListener("click", function(e){
       createBtn.value = "Create account";
     })
     .catch((err)=>{
-      alert("An error as occured, please try again later");
+      alert("An error as occured adding user");
       createBtn.value = "Create account";
       console.error(err);
     })
