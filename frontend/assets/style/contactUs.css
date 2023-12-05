@@ -5,11 +5,9 @@
 /* <!-- Get in touch section --> */
   .contact {
     margin-top: 40px;
-
   }
   .contact .details {
     margin-bottom: 20px;
-
   }
   span, p {
     margin: 0;
@@ -81,16 +79,18 @@
     left: 0;
     background-color: rgb(255, 255, 255, 0.6);
 }
-.contact .container {
+.contact .cont-container {
     z-index: 2;
     position: relative;
+    max-width: 1140px;
     margin: auto;
 
+
 }
-.contact .container h2 {
+.contact .cont-container h2 {
     font-weight: bold ;
     font-size: 30px;
-    color: var(--dark);
+    color: var(--main);
     margin: 0 0 10px;
     text-align: center;
 
@@ -117,7 +117,7 @@
     .contact .left,
     .contact .right{
         float: none;
-        width: 100%;
+        margin: auto;
     }
 
 }
@@ -130,7 +130,6 @@
     width: 100%;
     border-radius: 4px;
     border: 1px solid var(--main);
-
 
 }
 .contact form input:not([type="submit"]):focus,
@@ -156,7 +155,6 @@
     text-transform: uppercase;
     width: 100%;
     cursor: pointer;
-    border-radius: 15px 0px;
 }
 .contact textarea:focus::-webkit-input-placeholder,
 .contact form input:not([type="submit"]):focus::-webkit-input-placeholder{
@@ -175,29 +173,3 @@
 }
 
 /* End Contact us */
-/* Star grid system */
-
-@media(min-width: 576px) {  /*small screens, phones*/
-    .container {
-        max-width: 540px;
-    }
-}
-
-@media(min-width: 768px) { /*medium screens, phones*/
-    .container {
-        max-width: 720px;
-    }
-}
-
-@media(min-width: 992px) { /*PC, */
-    .container {
-        max-width: 960px;
-    }
-}
-
-@media(min-width: 1200px) { /*Large screens */
-    .container {
-        max-width: 1140px;
-    }
-}
-/* End grid system */
