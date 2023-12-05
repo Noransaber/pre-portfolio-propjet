@@ -81,7 +81,12 @@ def users_post():
     d_name = data.get("name")
     d_email = data.get("email")
     d_password = data.get("password")
-    
+
+    allUsers = db.get_table(User);
+    for user in allUsers:
+        if user.email == d_email:
+            abort(409, description="User with the email exists")
+
     new_user = User(id=str(uuid4()), name=d_name, email=d_email, password=d_password)
     response = db.add(new_user)
 
