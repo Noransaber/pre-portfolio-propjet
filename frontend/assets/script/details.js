@@ -7,6 +7,7 @@ let course = {};
 let course_videos = [];
 let likeBtn = document.querySelector(".likeBt");
 let host = "http://localhost:5000";
+// var host = "https://skillhub.devmarc.tech"
 
 function course_render() {
   if (!userDet) {

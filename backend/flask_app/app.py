@@ -15,6 +15,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
+
 # Set the template folder
 template_folder = "../../frontend/HTML/"
 app.template_folder = template_folder
@@ -25,6 +26,10 @@ app.static_folder = static_folder
 
 #Setting identation for better readability of json response
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
+
+@app.route('/favicon.ico')
+def favicon():
+    return '', 204
 
 app.register_blueprint(web_blueprint)
 app.register_blueprint(styles_blueprint)

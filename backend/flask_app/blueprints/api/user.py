@@ -9,7 +9,10 @@ from backend.flask_app.blueprints.api.main import api_blueprint
 from backend.storage.tables.user import User
 from backend import db, to_dict
 from uuid import uuid4
+from flask_bcrypt import Bcrypt
 
+
+encrypt = Bcrypt()
 
 @api_blueprint.route("/users", methods=["GET"])
 def users_get():
@@ -31,7 +34,14 @@ def users_get():
         user_dict = to_dict(user_obj)
         password_ = user_dict.get("password")
         email_ = user_dict.get("email")
-        if password == password_ and email == email_:
+
+        p_check = None
+        try:
+            p_check = encrypt.check_password_hash(password_, password)
+        except Exception as err:
+            p_check = False
+        
+        if p_check and email == email_:
             user = user_dict
             del user["password"]
             break
@@ -86,6 +96,9 @@ def users_post():
     for user in allUsers:
         if user.email == d_email:
             abort(409, description="User with the email exists")
+            
+    d_password = encrypt.generate_password_hash(d_password).decode('utf-8')
+    d_password = str(d_password)
 
     new_user = User(id=str(uuid4()), name=d_name, email=d_email, password=d_password)
     response = db.add(new_user)
