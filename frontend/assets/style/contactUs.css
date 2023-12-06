@@ -118,8 +118,8 @@
     .contact .right{
         float: none;
         margin: auto;
+        width: 100%;
     }
-
 }
 .contact form input:not([type="submit"]),
 .contact textarea {
