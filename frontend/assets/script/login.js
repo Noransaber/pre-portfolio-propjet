@@ -29,6 +29,30 @@ let host = "http://localhost:5000";
         });
     }
 
+// Function that checks if email is in the right format
+function validateEmail(email) {    
+  var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;    
+  if (emailRegex.test(email)) {    
+    return true;    
+  } else {    
+    return false;    
+  }    
+}
+
+// Password hashing function using the SHA-256 algorithm
+async function hashString(data) {
+  const encoder = new TextEncoder();
+  const dataBuffer = encoder.encode(data);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', dataBuffer);
+
+  // Convert the hash to a hexadecimal string
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  const hashedValue = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+
+  return hashedValue;
+}
+
+
 // Adding events on the log in button of the log in page that fetches user
 // details from backed database based on given login credentials
 // All response error are managed
@@ -46,44 +70,50 @@ subButton.addEventListener("click", (e)=>{
   
   if (!email_ || !password_) {
     alert("Login Credentials not complete, check and try again!");
+  } else if (!validateEmail(email_)) {
+    alert("Input correct email format");
   } else {
     subButton.value = "loading...";
 
-    let params = {email: email_, password: password_}
-    let param = new URLSearchParams(params);
-    let fullurl = `${host}/api/users?${param}`
-    fetch(fullurl)
-    .then((res)=>{
-      if (!res.ok) {
-	if (res.status == 404) {
-	  alert("User not found, ensure your details are correctly typed or kindly sign up if you're new");
-	}
-	if (res.status == 500) {
-	  alert("Database error, please try again later");
-	}
-	throw new Error(res.status);	
-      }
+    hashString(password_).then(res => {
+      password_ = res;
 
-      return res.json();
-    })
-    .then((res)=>{
-      let user = res.user
-      let userDict = {
-	name: user.name,
-	id: user.id,
-	selected_course: null
-      }
+      let params = {email: email_, password: password_}
+      let param = new URLSearchParams(params);
+      let fullurl = `${host}/api/users?${param}`
+      fetch(fullurl)
+      .then((res)=>{
+        if (!res.ok) {
+	  if (res.status == 404) {
+	    alert("User not found, ensure your details are correctly typed or kindly sign up if you're new");
+	  }
+	  if (res.status == 500) {
+	    alert("Database error, please try again later");
+	  }
+	  throw new Error(res.status);	
+        }
 
-      localStorage.setItem("user-data", JSON.stringify(userDict));
-      if (localStorage.getItem("likes-reg")) {
-        localStorage.removeItem("likes-reg");
-      }
-      location.href = "index.html";
-      subButton.value = "Log In";
-    })
-    .catch((err)=>{
-      subButton.value = "Log In";
-      console.error(err);
+        return res.json();
+      })
+      .then((res)=>{
+        let user = res.user
+        let userDict = {
+	  name: user.name,
+	  id: user.id,
+	  selected_course: null
+        }
+
+        localStorage.setItem("user-data", JSON.stringify(userDict));
+        if (localStorage.getItem("likes-reg")) {
+          localStorage.removeItem("likes-reg");
+        }
+        location.href = "index.html";
+        subButton.value = "Log In";
+      })
+      .catch((err)=>{
+        subButton.value = "Log In";
+        console.error(err);
+      })
     })
   }
 })
