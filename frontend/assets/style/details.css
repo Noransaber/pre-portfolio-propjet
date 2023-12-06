@@ -12,6 +12,7 @@
 }
 /* Mobile & Tablet Rules */
 /* Card section  */
+
 @media (max-width: 767px) {
   .courses-detail {
     max-width: 100%;

@@ -19,12 +19,18 @@ body {
 /* Start styling navbar */
 .nav {
   border-bottom: 1px solid grey;
+  position: relative;
+  z-index: 5000 !important;
 }
 .nav__toggle {
   position: absolute;
   cursor: pointer;
   margin: 0rem 1rem;
   right: 0;
+  z-index: 5000 !important;
+}
+.nav .nav__menu .active {
+  color: var(--main);
 }
 
 .close,
@@ -40,6 +46,7 @@ input[type="checkbox"] {
   gap: 2rem;
   align-items: center;
   margin: 1rem;
+  z-index: 5000 !important;
 }
 li {
   list-style: none;
@@ -48,11 +55,13 @@ li {
 li:first-child {
   margin-right: auto;
   display: block;
+  z-index: 5000 !important;
 }
 .nav__menu a {
   text-decoration: none;
   color: var(--dark);
   font-size: 1.2rem;
+  z-index: 5000 !important;
 }
 .nav__menu a:hover {
   color: var(--main);
@@ -65,24 +74,39 @@ li:first-child {
 }
 #nav__checkbox:checked ~ ul.nav__menu li {
   display: block;
+  z-index: 5000 !important;
 }
 
 #nav__checkbox:checked ~ label.nav__toggle .hamburger {
   display: none;
+  
 }
 #nav__checkbox:checked ~ label.nav__toggle .close {
   display: block;
+  z-index: 5000 !important;
 }
 
 @media only screen and (min-width: 768px) {
+  .nav {
+    position: relative !important;
+    z-index: 5000 !important;
+  }
   .nav__toggle {
     display: none;
+    z-index: 5000 !important ;
+    position: relative !important;
+    z-index: 5000 !important;
   }
   .nav__menu {
     flex-direction: row;
+    z-index: 5000 !important;
+    position: relative !important;
+    z-index: 5000 !important;
   }
   .nav__menu li {
     display: block;
+    position: relative !important;
+    z-index: 5000 !important;
   }
 }
 /* End navbar */
