@@ -19,24 +19,28 @@
     
 
 <!-- Start our navbar -->
-<nav class="navbar">
-    <div class="left-content">
-        <i class="fas fa-book"></i>
-        <a href="index.html">
-            <span> SKILL-HUB </span>
-          </a>
-    </div>
-
-    <div class="right-section">
-        <ul>
-            <li> <a  href="index.html">HOME </a></li>
-            <li > <a class='active' href="about.html"> ABOUT </a></li>
-            <li><a  href="contactUs.html"> CONTACT US </a></li>
-            <li><a  href="courses.html"> COURSES </a></li>
-            <li id='logout' style='display: none;'><a> LOGOUT </a></li>
-        </ul>
-    </div>
-</nav>
+<nav class="nav">
+    <input type="checkbox" id="nav__checkbox" class="nav__checkbox">
+    <label for="nav__checkbox" class="nav__toggle">
+      <img src="https://cdn0.iconfinder.com/data/icons/user-interface-150/24/List_menu_toggle-512.png" style='width: 30px; height: 30px;' class="hamburger" />
+      <img src="https://img.icons8.com/plumpy/30/000000/x.png" style='width: 20px; height: 20px;' class="close" />
+    </label>
+  
+    <ul class="nav__menu">
+      <li>
+        <a class='logo' href="index.html">
+          SKILL-HUB
+        </a>
+      </li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contactUs.html">Contact</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a style='display: none;' href="#">Logout</a></li>
+    </ul>
+  
+  </nav>
+  <!-- Ending navbar -->
 
 <!-- Landing img -->
 <section class='about-land'>
