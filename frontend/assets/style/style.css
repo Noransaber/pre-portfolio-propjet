@@ -151,7 +151,6 @@ p {
   .boxes .card-3,
   .card-2,
   .card-1 {
-    /* left: 72px !important; */
     width: 207px !important;
     height: 277px !important;
     position: absolute !important;

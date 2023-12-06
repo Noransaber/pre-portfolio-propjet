@@ -234,7 +234,24 @@
   margin: 80px auto;
   align-self: center;
 }
+@media all and (max-width: 767px) {
+  .blockquote {
+    max-width: 100%;
 
+    transform: translate(0%, -2%);
+  }
+  .blockquote h1 {
+    font-size: 30px !important;
+  }
+  .blockquote h4 {
+    display: none;
+  }
+  .about-us .right-sec p {
+    font-size: 14px !important;
+    transform: translateX(11%);
+  }
+
+}
 /* Blockquote header */
 .blockquote h1 {
   font-family: 'Abril Fatface', cursive;

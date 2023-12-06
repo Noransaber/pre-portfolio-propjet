@@ -18,15 +18,17 @@
     height: 60vh;
   }
   .courses-detail .info-div {
+    max-width: 100%;
     width: 420px !important;
     height: 300px !important;
-    transform: translate(-31%, 25%);
+    transform: translate(-34%, -5%);
   }
   .courses-detail .info-div h1 {
     font-size: 25px !important;
   }
   .courses-detail .info-div p{
     font-size: 14px !important;
+    max-width: 100%;
     width: 400px !important;
   }
   iframe {
@@ -37,10 +39,12 @@
   .video-container {
     display: grid;
     grid-template-columns: repeat((1, minmax(200px, 1fr)));
+    max-width: 100%;
   }
   .video-details {
-    margin: 0px !important;
+    margin: 10px 0px 10px 0px !important;
     height: 250px !important;
+    max-width: 100%;
   }
 
   iframe {
