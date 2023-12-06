@@ -61,8 +61,8 @@ li:first-child {
   text-decoration: none;
   color: var(--dark);
   font-size: 1.2rem;
-  background-color: white;
-  padding: 15.5px;
+  /* background-color: white;
+  padding: 15.5px; */
 
 }
 .nav__menu a:hover {
