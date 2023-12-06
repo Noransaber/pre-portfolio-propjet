@@ -46,7 +46,6 @@ input[type="checkbox"] {
   gap: 2rem;
   align-items: center;
   margin: 1rem;
-  z-index: 5000 !important;
 }
 li {
   list-style: none;
@@ -56,12 +55,15 @@ li:first-child {
   margin-right: auto;
   display: block;
   z-index: 5000 !important;
+
 }
 .nav__menu a {
   text-decoration: none;
   color: var(--dark);
   font-size: 1.2rem;
-  z-index: 5000 !important;
+  background-color: white;
+  padding: 15.5px;
+
 }
 .nav__menu a:hover {
   color: var(--main);
