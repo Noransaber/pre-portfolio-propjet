@@ -114,14 +114,14 @@ p {
   }
 }
 
-/* Feature section */
+/* Start Feature section */
 .feature {
   margin-top: 50px;
   height: 150vh;
   padding: 30px;
   background-color: #ddd;
 }
-@media (max-width: 649px) {
+@media (max-width: 767px) {
   .image {
     position: relative;
     max-width: 100%;
@@ -137,18 +137,21 @@ p {
     display: none;
   }
   .boxes .card-1 {
-    top: 2% !important;
+    top: 0% !important;
+    left: 3% !important;
   }
   .boxes .card-2 {
     top: 35% !important;
+    left: 3% !important;
   }
   .boxes .card-3 {
     top: 68% !important;
+    left: 3% !important;
   }
   .boxes .card-3,
   .card-2,
   .card-1 {
-    left: 72px !important;
+    /* left: 72px !important; */
     width: 207px !important;
     height: 277px !important;
     position: absolute !important;
@@ -163,6 +166,13 @@ p {
     font-weight: bold;
     width: 80px;
     font-size: 12px !important;
+  }
+  .feature span {
+    margin-left: -67px;
+  }
+  .about-us .right-sec span::before,
+  .about-us .right-sec span::after {
+    display: none;
   }
 }
 /* small screen rules */
@@ -414,7 +424,7 @@ p {
   left: 111%;
   bottom: 65%;
 }
-
+/* End the feature section */
 /* ABOUT US SECTION */
 .about-us {
   margin-top: 40px;
@@ -430,12 +440,22 @@ p {
   .about-us .left-sec img {
     display: none;
   }
+  .about-us .right-sec {
+    max-width: 100%;
+
+  }
+  .about-us .right-sec p {
+    max-width: 100%;
+    line-height: 2 !important;
+    font-size: 13px !important;
+  }
 }
 /* small screen rules */
 @media (min-width: 768px) {
   .about-us .left-sec img {
     display: none;
   }
+
 }
 
 /* Medium screen rules */
