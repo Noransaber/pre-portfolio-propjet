@@ -10,7 +10,10 @@
 /* adjusting it in extra small devices */
 @media (max-width: 767px) {
   .landing .text-cont .title {
-    font-size: 20px !important;
+    font-size: 18px !important;
+  }
+  .landing .text-cont .details {
+
   }
   .landing {
     max-width: 100%;
@@ -101,8 +104,13 @@ p {
   border-radius: 15px 0px;
 }
 @media (max-width: 767px) {
+  /* To left a space between button in small screen */
   .btn button {
     margin-bottom: 10px;
+  }
+  .landing .text-cont .details{
+    font-weight: bold;
+    font-size: 13px;
   }
 }
 
