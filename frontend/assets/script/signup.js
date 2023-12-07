@@ -2,8 +2,8 @@ let createBtn = document.querySelector(".submit-btn")
 let fnameEle = document.querySelector("#fname")
 let emailEle = document.querySelector("#email")
 let passwordEle = document.querySelector("#Password")
-let host = "http://localhost:5000";
-// var host = "https://skillhub.devmarc.tech"
+// let host = "http://localhost:5000";
+var host = "https://skillhub.devmarc.tech"
 
 // Funtion adjust the curson in sign up and log in form
     function adjustingCursorInForm() {

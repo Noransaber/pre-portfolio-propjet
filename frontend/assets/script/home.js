@@ -4,8 +4,8 @@ var aboutBtn = document.querySelector('.about-btn');
 var popCoursesCont = document.querySelector('.container') 
 var courses = []
 var popCoursesList = []
-var host = "http://localhost:5000";
-// var host = "https://skillhub.devmarc.tech"
+// var host = "http://localhost:5000";
+var host = "https://skillhub.devmarc.tech"
 
 
 // Sending request to the database for courses data

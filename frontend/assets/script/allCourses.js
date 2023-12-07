@@ -1,6 +1,6 @@
 var coursesCont = document.querySelector('.course-container') 
-var host = "http://localhost:5000";
-// var host = "https://skillhub.devmarc.tech"
+// var host = "http://localhost:5000";
+var host = "https://skillhub.devmarc.tech"
 
 // Sending request to the database for courses data
 function getCourses() {
