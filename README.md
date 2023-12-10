@@ -1,8 +1,12 @@
 # SKILL-HUB
 ![Static Badge](https://img.shields.io/badge/Contributors-2)
-[![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/)
+[![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/)![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+
 <img src="./frontend/img/skill-hub.png">
-Welcome to [SKILL-HUB](https://skillhub.devmarc.tech/), a project crafted with love and dedication.**Our mission** extends beyond merely providing a product; we aspire to empower individuals by arming them with knowledge, information, and skills. Our ultimate goal is to contribute to the development of a talented generation, recognizing that knowledge and its application hold transformative power. Sharing what we've learned is not just a task; it's a manifestation of our passion and commitment, here is a [blog](https://medium.com/@noransaber685/unveiling-skill-hub-empowering-learning-in-a-digital-era-a91969512cc9) about the project story
+Welcome to [SKILL-HUB](https://skillhub.devmarc.tech/) a project crafted with love and dedication.**Our mission** extends beyond merely providing a product; we aspire to empower individuals by arming them with knowledge, information, and skills. Our ultimate goal is to contribute to the development of a talented generation, recognizing that knowledge and its application hold transformative power. Sharing what we've learned is not just a task; it's a manifestation of our passion and commitment, here is a [Blog](https://medium.com/@noransaber685/unveiling-skill-hub-empowering-learning-in-a-digital-era-a91969512cc9) about the project story
 
 
 **In the development of this project**
@@ -30,6 +34,10 @@ we utilized HTML, CSS, JS, and Python (Flask). As junior developers, we encounte
 ## Getting Started
 ### Prerequisites
 Ensure you have the following installed:
+<<<<<<< HEAD
+=======
+
+>>>>>>> ce2fa22e66255e6cd7f5fe969ae7e3e1081c9a7e
 - [Flask](https://flask.palletsprojects.com/)
 - [npm](https://www.npmjs.com/)
 
@@ -43,36 +51,36 @@ Ensure you have the following installed:
 
 ## Usage
 1. **Sign Up/Log In:** Create an account or log in with your credentials.
-- Click on Join now button
+- Click on the Join Now button
 ![Join Now](image.png)
-- Fill the requirments and click on create acount
-![Sign up form](image-1.png)
+- Fill in the requirements and click on Create account
 2. **Explore Courses:** Browse through available courses .
 
 ## Credit
 This collaborative project was undertaken by a dynamic team comprising two skilled software engineers:
-**Adebayo Aywale**
-
+### Adebayo Aywale
 - [GitHub](https://github.com/Oluwamarcellus )
 - [Twitter](https://twitter.com/Hayyddex)
 - [LinkedIn](www.linkedin.com/in/devmarc)
 - [Haydexwisdom@gmail.com](mailto:Haydexwisdom@gmail.com)
-**Noran Abdelfattah**
 
+  
+### Noran Abdelfattah
 - [GitHub](https://github.com/Noransaber?tab=repositories)
 - [Twitter](https://twitter.com/Noransaber11)
 - [LinkedIn](https://www.linkedin.com/in/noran-saber-abdelfattah-6198471ba/)
--[Medium](https://medium.com/@noransaber685)
+- [Medium](https://medium.com/@noransaber685)
 - [noransaber685@gmail.com](mailto:noransaber685@gmail.com)
+
 Additionally, this project was carried out under the supervision of [ALX Africa](https://www.alxafrica.com/).
 
 ## Contributing
-We welcome contributions! If you'd like to contribute, please send us on gmail
-- [noransaber685@gmail.com]
-- [Haydexwisdom@gmail.com]
+We welcome contributions! If you'd like to contribute, please send us an Gmail
+- noransaber685@gmail.com
+- Haydexwisdom@gmail.com
 * Clone repo and create a new branch: $ git checkout https://github.com/Noransaber/pre-portfolio-propjet.git -b name_for_new_branch.
 * Make changes and test
-* Submit Pull Request with comprehensive description of changes
+* Submit a Pull Request with a comprehensive description of changes
 
 ## Contact
 For questions or support, suggestion please contact us at
