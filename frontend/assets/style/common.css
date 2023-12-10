@@ -34,7 +34,7 @@ body {
 }
 
 .close,
-input[type="checkbox"] {
+input[type='checkbox'] {
   display: none;
 }
 .hamburger {
@@ -55,7 +55,6 @@ li:first-child {
   margin-right: auto;
   display: block;
   z-index: 5000 !important;
-
 }
 .nav__menu a {
   text-decoration: none;
@@ -63,13 +62,12 @@ li:first-child {
   font-size: 1.2rem;
   /* background-color: white;
   padding: 15.5px; */
-
 }
 .nav__menu a:hover {
   color: var(--main);
   font-weight: bold;
 }
-.nav__menu a.logo{
+.nav__menu a.logo {
   color: var(--main);
   font-weight: bold;
   font-size: 30px;
@@ -81,7 +79,6 @@ li:first-child {
 
 #nav__checkbox:checked ~ label.nav__toggle .hamburger {
   display: none;
-  
 }
 #nav__checkbox:checked ~ label.nav__toggle .close {
   display: block;
