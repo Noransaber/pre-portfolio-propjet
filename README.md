@@ -30,10 +30,10 @@ we utilized HTML, CSS, JS, and Python (Flask). As junior developers, we encounte
 ## Getting Started
 ### Prerequisites
 Ensure you have the following installed:
-```
+
 - [Flask](https://flask.palletsprojects.com/)
 - [npm](https://www.npmjs.com/)
-```
+
 
 ### Installation
 1. Clone the repository: `git clone https://github.com/Noransaber/pre-portfolio-propjet.git`
@@ -46,6 +46,7 @@ Ensure you have the following installed:
 1. **Sign Up/Log In:** Create an account or log in with your credentials.
 - Click on Join now button
 ![Join Now](image.png)
+
 - Fill the requirments and click on create acount
 ![Sign up form](image-1.png)
 2. **Explore Courses:** Browse through available courses .
@@ -63,8 +64,9 @@ This collaborative project was undertaken by a dynamic team comprising two skill
 - [GitHub](https://github.com/Noransaber?tab=repositories)
 - [Twitter](https://twitter.com/Noransaber11)
 - [LinkedIn](https://www.linkedin.com/in/noran-saber-abdelfattah-6198471ba/)
--[Medium](https://medium.com/@noransaber685)
+- [Medium](https://medium.com/@noransaber685)
 - [noransaber685@gmail.com](mailto:noransaber685@gmail.com)
+
 Additionally, this project was carried out under the supervision of [ALX Africa](https://www.alxafrica.com/).
 
 ## Contributing
