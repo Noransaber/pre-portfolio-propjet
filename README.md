@@ -46,9 +46,7 @@ Ensure you have the following installed:
 1. **Sign Up/Log In:** Create an account or log in with your credentials.
 - Click on Join now button
 ![Join Now](image.png)
-
 - Fill the requirments and click on create acount
-![Sign up form](image-1.png)
 2. **Explore Courses:** Browse through available courses .
 
 ## Credit
