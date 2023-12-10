@@ -1,6 +1,7 @@
 # SKILL-HUB
 ![Static Badge](https://img.shields.io/badge/Contributors-2)
-[![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/)![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+[![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/)
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
@@ -27,17 +28,12 @@ we utilized HTML, CSS, JS, and Python (Flask). As junior developers, we encounte
 
 ## Features
 - **User Authentication:** Secure sign-up and login functionality for you
-- **Course:** Easily can access the courses and start watching it.
+- **Course:** Easily can access the courses and start watching them.
 - **Simple and eye-friendly website** SKILL-HUB where simplicity meets functionality! We've crafted an online experience that puts ease of use at the forefront, ensuring that every visitor can effortlessly navigate and enjoy their time here.
 - **Responsive Design:** Access the platform seamlessly on various devices for a user-friendly experience.
 
 ## Getting Started
 ### Prerequisites
-Ensure you have the following installed:
-<<<<<<< HEAD
-=======
-
->>>>>>> ce2fa22e66255e6cd7f5fe969ae7e3e1081c9a7e
 - [Flask](https://flask.palletsprojects.com/)
 - [npm](https://www.npmjs.com/)
 
