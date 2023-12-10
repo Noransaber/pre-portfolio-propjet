@@ -30,10 +30,9 @@ we utilized HTML, CSS, JS, and Python (Flask). As junior developers, we encounte
 ## Getting Started
 ### Prerequisites
 Ensure you have the following installed:
-```
 - [Flask](https://flask.palletsprojects.com/)
 - [npm](https://www.npmjs.com/)
-```
+
 
 ### Installation
 1. Clone the repository: `git clone https://github.com/Noransaber/pre-portfolio-propjet.git`
