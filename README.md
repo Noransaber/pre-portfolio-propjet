@@ -52,14 +52,14 @@ Ensure you have the following installed:
 
 ## Credit
 This collaborative project was undertaken by a dynamic team comprising two skilled software engineers:
-**Adebayo Aywale**
-
+### Adebayo Aywale
 - [GitHub](https://github.com/Oluwamarcellus )
 - [Twitter](https://twitter.com/Hayyddex)
 - [LinkedIn](www.linkedin.com/in/devmarc)
 - [Haydexwisdom@gmail.com](mailto:Haydexwisdom@gmail.com)
-**Noran Abdelfattah**
 
+  
+### Noran Abdelfattah
 - [GitHub](https://github.com/Noransaber?tab=repositories)
 - [Twitter](https://twitter.com/Noransaber11)
 - [LinkedIn](https://www.linkedin.com/in/noran-saber-abdelfattah-6198471ba/)
