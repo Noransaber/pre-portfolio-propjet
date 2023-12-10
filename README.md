@@ -1,6 +1,10 @@
 # SKILL-HUB
 ![Static Badge](https://img.shields.io/badge/Contributors-2)
-[![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/)
+[![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/)![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+
 <img src="./frontend/img/skill-hub.png">
 Welcome to [SKILL-HUB](https://skillhub.devmarc.tech/), a project crafted with love and dedication.**Our mission** extends beyond merely providing a product; we aspire to empower individuals by arming them with knowledge, information, and skills. Our ultimate goal is to contribute to the development of a talented generation, recognizing that knowledge and its application hold transformative power. Sharing what we've learned is not just a task; it's a manifestation of our passion and commitment, here is a [blog](https://medium.com/@noransaber685/unveiling-skill-hub-empowering-learning-in-a-digital-era-a91969512cc9) about the project story
 
