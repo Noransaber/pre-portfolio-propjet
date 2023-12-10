@@ -27,8 +27,8 @@ we utilized HTML, CSS, JS, and Python (Flask). As junior developers, we encounte
 
 ## Features
 - **User Authentication:** Secure sign-up and login functionality for you
-- **Course :** Easily can access the courses and start watching it.
-- **Simple and eye friendly website** SKILL-HUB where simplicity meets functionality! We've crafted an online experience that puts ease of use at the forefront, ensuring that every visitor can effortlessly navigate and enjoy their time here.
+- **Course:** Easily can access the courses and start watching it.
+- **Simple and eye-friendly website** SKILL-HUB where simplicity meets functionality! We've crafted an online experience that puts ease of use at the forefront, ensuring that every visitor can effortlessly navigate and enjoy their time here.
 - **Responsive Design:** Access the platform seamlessly on various devices for a user-friendly experience.
 
 ## Getting Started
@@ -75,7 +75,7 @@ This collaborative project was undertaken by a dynamic team comprising two skill
 Additionally, this project was carried out under the supervision of [ALX Africa](https://www.alxafrica.com/).
 
 ## Contributing
-We welcome contributions! If you'd like to contribute, please send us an Gmail
+We welcome contributions! If you'd like to contribute, please send us a Gmail
 - noransaber685@gmail.com
 - Haydexwisdom@gmail.com
 * Clone repo and create a new branch: $ git checkout https://github.com/Noransaber/pre-portfolio-propjet.git -b name_for_new_branch.
