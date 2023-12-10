@@ -44,9 +44,9 @@ Ensure you have the following installed:
 
 ## Usage
 1. **Sign Up/Log In:** Create an account or log in with your credentials.
-- Click on Join now button
+- Click on the Join Now button
 ![Join Now](image.png)
-- Fill the requirments and click on create acount
+- Fill in the requirements and click on Create account
 2. **Explore Courses:** Browse through available courses .
 
 ## Credit
@@ -68,12 +68,12 @@ This collaborative project was undertaken by a dynamic team comprising two skill
 Additionally, this project was carried out under the supervision of [ALX Africa](https://www.alxafrica.com/).
 
 ## Contributing
-We welcome contributions! If you'd like to contribute, please send us on gmail
-- [noransaber685@gmail.com]
-- [Haydexwisdom@gmail.com]
+We welcome contributions! If you'd like to contribute, please send us an Gmail
+- noransaber685@gmail.com
+- Haydexwisdom@gmail.com
 * Clone repo and create a new branch: $ git checkout https://github.com/Noransaber/pre-portfolio-propjet.git -b name_for_new_branch.
 * Make changes and test
-* Submit Pull Request with comprehensive description of changes
+* Submit a Pull Request with a comprehensive description of changes
 
 ## Contact
 For questions or support, suggestion please contact us at
