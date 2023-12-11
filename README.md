@@ -7,8 +7,8 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 
 <img src="./frontend/img/skill-hub.png">
-Welcome to [SKILL-HUB](https://skillhub.devmarc.tech/)
-a project crafted with love and dedication. Our mission extends beyond merely providing a product; we aspire to empower individuals by arming them with knowledge, information, and skills. Our ultimate goal is to contribute to the development of a talented generation, recognizing that knowledge and its application hold transformative power. Sharing what we've learned is not just a task; it's a manifestation of our passion and commitment, here is a [Blog] (https://medium.com/@noransaber685/unveiling-skill-hub-empowering-learning-in-a-digital-era-a91969512cc9) about the project story
+
+Welcome to [SKILL-HUB](https://skillhub.devmarc.tech/) a project crafted with love and dedication. Our mission extends beyond merely providing a product; we aspire to empower individuals by arming them with knowledge, information, and skills. Our ultimate goal is to contribute to the development of a talented generation, recognizing that knowledge and its application hold transformative power. Sharing what we've learned is not just a task; it's a manifestation of our passion and commitment, here is a [Blog](https://medium.com/@noransaber685/unveiling-skill-hub-empowering-learning-in-a-digital-era-a91969512cc9) about the project story
 
 
 **In the development of this project**
@@ -27,24 +27,29 @@ we utilized HTML, CSS, JS, and Python (Flask). As junior developers, we encounte
 - Encourage learners to share their knowledge through explanatory content.
 - Our journey is a continuous learning process, and we are committed to evolving SKILL-HUB into a more advanced and enriching platform.
 
+
 ## Features
 - **User Authentication:** Secure sign-up and login functionality for you
 - **Course:** Easily can access the courses and start watching them.
 - **Simple and eye-friendly website** SKILL-HUB where simplicity meets functionality! We've crafted an online experience that puts ease of use at the forefront, ensuring that every visitor can effortlessly navigate and enjoy their time here.
 - **Responsive Design:** Access the platform seamlessly on various devices for a user-friendly experience.
 
+
 ## Getting Started
 ### Prerequisites
+- [Python](https://www.python.org/)
 - [Flask](https://flask.palletsprojects.com/)
-- [npm](https://www.npmjs.com/)
+- [dotenv](https://www.npmjs.com/package/dotenv)
+- [Flask-bcrypt](https://pypi.org/project/Flask-Bcrypt/)
+- [SQLAlchemy](https://www.sqlalchemy.org/)
+- [Flask-cors](https://flask-cors.readthedocs.io/en/latest/)
 
 
 ### Installation
 1. Clone the repository: `git clone https://github.com/Noransaber/pre-portfolio-propjet.git`
 2. Navigate to the project directory: `cd pre-portfolio-propjet`
-3. Install dependencies: `npm install`
-4. Start the server: `npm start`
-5. Open your browser and go to `http://localhost:3000` to access the platform.
+3. `python -m backend.flask_app.app`
+4. Open your browser and go to `http://localhost:3000` to access the platform.
 
 ## Usage
 1. **Sign Up/Log In:** Create an account or log in with your credentials.
