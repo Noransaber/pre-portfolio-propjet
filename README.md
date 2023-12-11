@@ -7,9 +7,8 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 
 <img src="./frontend/img/skill-hub.png">
-Welcome to
-[SKILL-HUB](https://skillhub.devmarc.tech/)
-a project crafted with love and dedication. Our mission extends beyond merely providing a product; we aspire to empower individuals by arming them with knowledge, information, and skills. Our ultimate goal is to contribute to the development of a talented generation, recognizing that knowledge and its application hold transformative power. Sharing what we've learned is not just a task; it's a manifestation of our passion and commitment, here is a [Blog](https://medium.com/@noransaber685/unveiling-skill-hub-empowering-learning-in-a-digital-era-a91969512cc9) about the project story
+Welcome to [SKILL-HUB](https://skillhub.devmarc.tech/)
+a project crafted with love and dedication. Our mission extends beyond merely providing a product; we aspire to empower individuals by arming them with knowledge, information, and skills. Our ultimate goal is to contribute to the development of a talented generation, recognizing that knowledge and its application hold transformative power. Sharing what we've learned is not just a task; it's a manifestation of our passion and commitment, here is a [Blog] (https://medium.com/@noransaber685/unveiling-skill-hub-empowering-learning-in-a-digital-era-a91969512cc9) about the project story
 
 
 **In the development of this project**
@@ -59,7 +58,7 @@ This collaborative project was undertaken by a dynamic team comprising two skill
 ### Adebayo Aywale
 - [GitHub](https://github.com/Oluwamarcellus )
 - [Twitter](https://twitter.com/Hayyddex)
-- [LinkedIn](www.linkedin.com/in/devmarc)
+- [LinkedIn](https://www.linkedin.com/in/devmarc)
 - [Haydexwisdom@gmail.com](mailto:Haydexwisdom@gmail.com)
 
   
